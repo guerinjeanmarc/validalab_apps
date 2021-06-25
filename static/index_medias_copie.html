@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/fontawesome.min.css">
+
+
+  <title>Validalab</title>
+
+
+
+</head>
+
+<body>
+  <!--
+
+<div id="graph">
+</div>
+-->
+
+  <div role="navigation" class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="row">
+        <div class="navbar-header col-sm-3 col-md-3" style="margin-right:15px">
+          <div class="logo-well">
+            <a href="\"> <img src="https://www.validalab.fr/wp-content/uploads/2020/09/Logo.png" alt="logo_validalab">
+            </a>
+          </div>
+          <div class="navbar-brand">
+            <div class="brand">
+              <p style="color:dark">Validalab</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-7 col-md-7">
+          <ul class="nav navbar-nav">
+            <li>
+              <form role="resercher" class="navbar-form" id="search">
+                <div class="form-group">
+                  <input type="text" value="lemonde.fr" id='input-search' placeholder="rechercher par nom de media"
+                    class="form-control" name="search">
+                </div>
+                <button class="btn btn-default" type="submit">Rechercher</button>
+                <!--  <a href="\ent"><button type="button" class="btn btn-dark" style="">Entite</button></a>
+                            <a href="\twit"> <button type="button" class="btn btn-dark" style="">Twitter</button></a>
+                            <a href="\yout"><button type="button" class="btn btn-dark" style="">Youtube</button></a> -->
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-2">
+      <div class="panel panel-default">
+        <div class="panel-heading">Résultats de la recherche</div>
+        <table id="results" class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>Nom
+                <span data-toggle="tooltipFields"
+                  title="Ce champ représente l'adresse du site, le pseudo pour les réseau sociaux.">
+                  <span><i class="fas fa-question-circle"></i>
+                  </span></span>
+              </th>
+
+              <th>Type
+                <span data-toggle="tooltipFields" title="Ce champ représente le type de média pour une entité.">
+                  <span><i class="fas fa-question-circle"></i>
+                  </span></span>
+              </th>
+              <th>Entité
+                <span data-toggle="tooltipFields" title="Ce champ représente le nom de l'entité.">
+                  <span><i class="fas fa-question-circle"></i>
+                  </span></span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+
+
+    </div>
+    <!--<svg  id="key" class="col-lg-9" style='background-color: black ' ></svg> 
+</div>-->
+
+    <!--<div id="key"> 
+    </div>-->
+
+    <div id="main" class="col-lg-8">
+    </div>
+    <div class="container col-lg-2">
+      <div class="card ">
+        <div class="card-body">
+          <!--       <h2 id="element3">site</h2>  
+        <div class="logo-well" id="element1"><a href="\"><img src="./icons/logo_validalab_48.png" alt="logo_validalab"></a></div> -->
+          <h3 class="card-link limit" id="put_link"> </h3>
+          <!-- <h3 id="">Informations pratiques</h3>   -->
+          <h6 class="card-subtitle  text-muted" style="margin: 10px;">Lutte contre la desinformation</h6>
+          <!-- <p class="card-text mb-2" style="margin: 60px;">Vous visitez le site suivant:
+            <a class="card-link "><div class="card-link limit" id="put_link" style="color:#FF0000;"></div></a>
+        </p> -->
+          <div id="put_link_6"></div>
+          <div id="put_link_7"> </div>
+          <div  id="put_link_12" > </div>
+          <div id="put_link_2">
+            <div id="put_link_3"> Wikipedia</div>
+            <p id="summary_content"></p>
+          </div>
+
+          <div id="put_link_8">
+            <div id="put_link_3"> Statistiques</div>
+            <p id="stats_content"></p>
+          </div>
+          <div id="put_link_9">
+            <p id="stats_pro_content"></p>
+          </div>
+          <div id="put_link_10">
+            <div id="element4"><span id="put_1"><i class="fab fa-twitter fa-lg"> </i></span> <span
+                id="where_to_insert"></span> </div>
+            <div id="element5"><span id="put_2"><i class="fab fa-youtube fa-lg"> </i></span> <span
+                id="where_to_insert_1"> </span></div>
+            <div id="element6"><span id="put_3"><i class="fab fa-facebook fa-lg"></i></span> <span
+                id="where_to_insert_2"> </span></div>
+          </div>
+          <div id="put_link_5">
+            <div id="put_link_3"> Propiétaires</div>
+            <p id="links_content"></p>
+          </div>
+          <div id="put_link_4">
+            <div id="put_link_3"> Sites d'infos du meme proprietaire</div>
+            <p id="owner_content"></p>
+          </div>
+          <div  id="put_link_11" >
+            <div id="put_link_3"> Sites Amis</div>
+          <p id="friends_content"></p></div>
+          <div style="margin:60px"><a href="http://51.159.52.80:5000/" class="card-link" target="_blank">Visitez le site
+              Validalab</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer" style="background-color:white; margin-top:10px">
+    <div class="hfg_footer">
+      <div class="footer--row footer-bottom layout-full-contained" id="cb-row--footer-bottom" data-row-id="bottom"
+        data-show-on="desktop">
+        <div class="footer--row-inner footer-bottom-inner footer-content-wrap">
+          <div class="container">
+            <div class="hfg-grid nv-footer-content hfg-grid-bottom row--wrapper row "
+              data-section="hfg_footer_layout_bottom">
+              <div
+                class="builder-item hfg-item-last hfg-item-first col-12 col-md-12 col-sm-12 desktop-center tablet-center mobile-center hfg-item-v-middle">
+                <div class="item--inner builder-item--footer_copyright" data-section="footer_copyright"
+                  data-item-id="footer_copyright">
+                  <div class="component-wrap">
+                    <p>©2020 <a href="https://www.validalab.fr" rel="nofollow">Validalab</a> | All rights reserved.</p>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  <script defer src="/static/js/d3-graph.js"></script>
+  
+  <script defer src="/static/app.js" ></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/js/all.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/js/solid.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/js/fontawesome.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.1.2/echarts.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script defer type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!-- <script defer type="text/javascript" src="/static/js/echart-graph.js" ></script> -->
+  </footer>
+  
+  
+</body>
+
+</html>

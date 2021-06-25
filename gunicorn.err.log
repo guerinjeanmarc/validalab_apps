@@ -1,0 +1,20 @@
+[2021-06-25 14:04:54 +0000] [854949] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 14:04:54 +0000] [854949] [INFO] Listening at: http://0.0.0.0:5000 (854949)
+[2021-06-25 14:04:54 +0000] [854949] [INFO] Using worker: sync
+[2021-06-25 14:04:54 +0000] [854951] [INFO] Booting worker with pid: 854951
+[2021-06-25 14:04:55 +0000] [854952] [INFO] Booting worker with pid: 854952
+[2021-06-25 14:04:55 +0000] [854953] [INFO] Booting worker with pid: 854953
+[2021-06-25 14:04:55 +0000] [854954] [INFO] Booting worker with pid: 854954
+[2021-06-25 14:11:27 +0000] [854949] [CRITICAL] WORKER TIMEOUT (pid:854951)
+[2021-06-25 14:11:27 +0000] [854949] [CRITICAL] WORKER TIMEOUT (pid:854953)
+[2021-06-25 14:11:27 +0000] [854951] [INFO] Worker exiting (pid: 854951)
+[2021-06-25 14:11:27 +0000] [854953] [INFO] Worker exiting (pid: 854953)
+[2021-06-25 14:11:27 +0000] [855097] [INFO] Booting worker with pid: 855097
+[2021-06-25 14:11:27 +0000] [855098] [INFO] Booting worker with pid: 855098
+[2021-06-25 14:12:27 +0000] [854949] [CRITICAL] WORKER TIMEOUT (pid:854952)
+[2021-06-25 14:12:27 +0000] [854949] [CRITICAL] WORKER TIMEOUT (pid:855098)
+[2021-06-25 14:12:27 +0000] [854952] [INFO] Worker exiting (pid: 854952)
+[2021-06-25 14:12:27 +0000] [855098] [INFO] Worker exiting (pid: 855098)
+[2021-06-25 14:12:27 +0000] [854949] [WARNING] Worker with pid 854952 was terminated due to signal 9
+[2021-06-25 14:12:27 +0000] [855117] [INFO] Booting worker with pid: 855117
+[2021-06-25 14:12:27 +0000] [855118] [INFO] Booting worker with pid: 855118
