@@ -1,4 +1,324 @@
 
+    var indexT
+    d3.json("/web_graph", function(error, graph){
+      
+console.log(graph.links)
+      var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+var nodesForGraph=graph.nodes.map(v=>({...v,symbolSize:v.size*4,
+  category:v.Community==null?0:v.Community==-1?2:v.Community==-0.5?1:3,
+  color:v.Community==null ? "#a6a5a4": v.Community==-1 ? "#b50d1e": v.Community==-0.5 ? "#e89613":"#3c9951"
+}))
+setTimeout(function(){
+  //do what you need here
+}, 2000);
+var linksForGraph=graph.links.map(v=>({...v,source:v.source,target:v.target
+}))
+//console.log(nodesForGraph) 
+graph.links.map(v=>console.log(v.source,v.target)
+)
+/* console.log(nodesForGraph)*/
+console.log(linksForGraph) 
+
+
+
+
+
+/* indexT=nodesForGraph.filter(x => x.name === "lemonde.fr").map(x => x.id) */
+//indexT=nodesForGraph.findIndex(x => x.name === "lemonde.fr")
+
+/* var res = alasql('SELECT * FROM ? links \
+       LEFT JOIN ? nodes ON nodes.source = links.id',[linksForGraph, nodesForGraph]);
+console.log(res) */
+var communities=[
+      {
+        "name": "Neutre",
+        'itemStyle':{color:"#a6a5a4"}
+      },
+      {
+        "name": "Peu fiables",
+        'itemStyle':{color:"#e89613"}
+      },
+      {
+        "name": "Pas fiables",
+        'itemStyle':{color:"#b50d1e"}
+      },
+      {
+        "name": "Fiables",
+        'itemStyle':{color:"#3c9951"}
+      }
+    ]
+
+    myChart.showLoading();
+
+    myChart.hideLoading();
+    function highlight(toHighlight){
+      return {
+        title: {
+            text: 'Les medias',
+            subtext: 'Default layout',
+            top: 'bottom',
+            left: 'right'
+        },
+        tooltip: {},
+        legend: [{
+          textStyle: {
+            color: "white" ,
+            fontWeight:"700",
+            fontSize:14
+          }            ,
+    backgroundColor: 'black' ,
+    /* borderColor:'#fff',
+    borderWidth:2, */
+            //selectedMode: 'single',
+            data: communities.map(function (a) {
+                return a.name;
+            })
+        }],
+        animationDuration: 1000,
+        animationEasingUpdate: 'quinticInOut',
+        markPoint:{data:{itemStyle:{
+          color: nodesForGraph.map(function (a) {
+            return a.color;
+        })
+        }}
+    
+        },
+        series: [
+            {
+                name: 'Media Français',
+                type: 'graph',
+                layout: 'force',
+                data: nodesForGraph.map(function (node) {
+                  return node.id==toHighlight?{
+                      x: node.x,
+                      y: node.y,
+                      id: node.id,
+                      name: node.name,
+                      symbolSize: 200,
+                      itemStyle: {
+                          fixed:true,
+                          color: "#f00",
+                          shadowColor: 'rgba(0, 0, 0, 0.5)',
+                          shadowBlur: 10,
+                          zlevel:50,
+                          z:50,
+                          
+                       /*    symbolOffset:[0, '-50%'],
+                          symbolKeepAspect:true */
+          
+                      },
+                      emphasis:{
+                        color:"#ffc000",
+                        borderCap:'square'
+                      },
+                      category:node.category
+                  }:{
+                    x: node.x,
+                    y: node.y,
+                    id: node.id,
+                    name: node.name,
+                    symbolSize: node.symbolSize,
+                    itemStyle: {
+                        color: node.color,
+                        opacity:0.1
+                    },
+                    category:node.category
+                };
+              }),
+                links: linksForGraph.map(function (node) {
+                  return node.source==toHighlight?{
+                      source: node.source,
+                      target: node.target,
+                      lineStyle:{
+                        width:10,
+    
+                      },
+                      symbolSize:100
+    
+                  }:{
+                    source: node.source,
+                    target: node.target,
+                    lineStyle:{
+                      opacity:0.1,
+    
+                    }
+    
+                };
+              }),
+                categories: communities,
+                roam: true,
+                draggable:true,
+                selectedMode:'single',
+                select:{
+                    itemStyle:{ 
+                    color:"#f00",
+                    borderWidth:2,
+                    borderColor:'#fff'
+                }},
+                itemStyle:{
+                  borderColor:'#fff',
+                  borderWidth:1,
+                  borderTYpe:'solid',
+                  
+                },
+                label: {
+                  show:true,
+                    position: 'inside',
+                    formatter: '{b}',
+                    fontWeight:'bolder',
+                    color:'#fff'
+                },
+                labelLayout: {
+                    hideOverlap: true
+                },
+                force: {
+                edgeLength: 10,
+                repulsion: [100,200],
+                gravity: 0.2
+            },
+                lineStyle: {
+                    color: 'source',
+                    curveness: 0,
+                    width:3
+                },
+                edgeSymbolSize:[10,40],
+                emphasis: {
+                    focus: 'adjacency',
+                    lineStyle: {
+                        width: 20
+                    },
+                    label: {
+                    position: 'right',
+                    show: true
+                }
+                }
+            }
+        ]
+    };
+    }
+ 
+  var unHighlight= {
+    title: {
+        text: 'Les medias',
+        subtext: 'Default layout',
+        top: 'bottom',
+        left: 'right'
+    },
+    tooltip: {},
+    legend: [{
+      textStyle: {
+        color: "white" ,
+        fontWeight:"700",
+        fontSize:14
+      }            ,
+  backgroundColor: 'black' ,
+  /* borderColor:'#fff',
+  borderWidth:2, */
+        //selectedMode: 'single',
+        data: communities.map(function (a) {
+            return a.name;
+        })
+    }],
+    animationDuration: 100,
+    animationEasingUpdate: 'quinticInOut',
+    markPoint:{data:{itemStyle:{
+      color: nodesForGraph.map(function (a) {
+        return a.color;
+    })
+    }}
+  
+    },
+    series: [
+        {
+            name: 'Media Français',
+            type: 'graph',
+            layout: 'force',
+            data: nodesForGraph.map(function (node) {
+              return {
+                  x: node.x,
+                  y: node.y,
+                  id: node.id,
+                  name: node.name,
+                  symbolSize: node.symbolSize,
+                  itemStyle: {
+                      color: node.color,
+      
+                  },
+                  emphasis:{
+                    color:"#ffc000",
+                    borderCap:'square'
+                  },
+                  category:node.category
+              };
+          }),
+            links: linksForGraph.map(function (node) {
+              return {
+                  source: node.source,
+                  target: node.target,
+   
+  
+              };
+          }),
+            categories: communities,
+            roam: true,
+            draggable:true,
+            selectedMode:'single',
+            select:{
+                itemStyle:{ 
+                color:"#f00",
+                borderWidth:2,
+                borderColor:'#fff'
+            }},
+            itemStyle:{
+              borderColor:'#fff',
+              borderWidth:1,
+              borderTYpe:'solid',
+              
+            },
+            label: {
+              show:true,
+                position: 'inside',
+                formatter: '{b}',
+                fontWeight:'bolder',
+                color:'#fff'
+            },
+            labelLayout: {
+                hideOverlap: true
+            },
+            force: {
+            edgeLength: 20,
+            repulsion: 2000,
+            gravity: 0.1
+        },
+            lineStyle: {
+                color: 'source',
+                curveness: 0,
+                width:3
+            },
+            edgeSymbolSize:[10,40],
+            emphasis: {
+                focus: 'adjacency',
+                lineStyle: {
+                    width: 20
+                },
+                label: {
+                position: 'right',
+                show: true
+            }
+            }
+        }
+    ]
+  };
+  
+  function get_chart(isHighlight,toHighlight)
+  {
+    return isHighlight=='true'?highlight(toHighlight):unHighlight
+  }
+  myChart.setOption(unHighlight)
+    var zr = myChart.getZr();
     $(function () {
         function showDetails(site_name) {
             $.get("/media/" + encodeURIComponent(site_name),
@@ -35,11 +355,17 @@
             var query=$("#search").find("input[name=search]").val();
             $.get("/search?q=" + encodeURIComponent(query),
                     function (data) {
+                      
                         var t = $("table#results tbody").empty();
                         if (!data || data.length == 0) return;
                         data.forEach(function (media) {
-                            $("<tr><td class='media'>" + media.site_name + "</td><td>" + media.type + "</td><td>" + media.entity + "</td><td>").appendTo(t)
-                                    .click(function() { showDetails($(this).find("td").text()); get_info($(this).find("td.media").text());})
+                            $("<tr class='rows-tables'><td class='media'>" + media.site_name + "</td><td>" + media.type + "</td><td>" + media.entity + "</td><td>").appendTo(t)
+                                    .click(function() { showDetails($(this).find("td.media").text()); get_info($(this).find("td.media").text()); 
+                                    var toHighlight=nodesForGraph.findIndex(x => x.name === media.site_name);
+                                    console.log('toHighliht',toHighlight)
+                                  
+                                  
+                                     myChart.setOption(get_chart('true',toHighlight));})
                                     .click(function() { console.log($(this).find("td").text());})
                                     //.click(function() { console.log("fonction1 ici", $(this).find("td.media").text());})
                                         //.submit(testfunc)
@@ -75,22 +401,7 @@
 
 
 
-function entityButtonFunction() {
-    var graph_type = "/ent_graph";
-    console.log(graph_type);
-}
-function websiteButtonFunction() {
-    var graph_type = "/web_graph";
-    console.log(graph_type);
-}
-function twitterButtonFunction() {
-    var graph_type = "/twit_graph";
-    console.log(graph_type);
-}
-function youtubeButtonFunction() {
-    var graph_type = "/yout_graph";
-    console.log(graph_type);
-}
+
 
 var catColScale = d3.scaleOrdinal(d3.schemeCategory20);
 var contColLinkScale = d3.scaleLinear()
@@ -101,7 +412,7 @@ var contLinkScale = d3.scaleLinear()
         .range([1, 10]);
 
 
-d3.json("/web_graph", function(error, graph){
+
 
 var baseNodes = graph.nodes
 var baseLinks = graph.links
@@ -517,107 +828,18 @@ function updateSimulation() {
 // to trigger the initial render
 updateSimulation()
 //ownload(JSON.stringify(graph.nodes), 'nodes.json', 'json');
-var chartDom = document.getElementById('main');
-var myChart = echarts.init(chartDom);
-var option;
 
-var nodesForGraph=graph.nodes.map(v=>({...v,symbolSize:v.size*10,category:v.Community
-}))
-var linksForGraph=graph.links.map(v=>({...v,source:v.source.id,target:v.target.id
-}))
-console.log(linksForGraph)
-var communities=[
-      {
-        "name": "Serieux"
-      },
-      {
-        "name": "Droite"
-      },
-      {
-        "name": "Gauche"
-      },
-      {
-        "name": "Complotistes"
-      }
-    ]
-myChart.showLoading();
-
-myChart.hideLoading();
-option = {
-        title: {
-            text: 'Les medias',
-            subtext: 'Default layout',
-            top: 'bottom',
-            left: 'right'
-        },
-        tooltip: {},
-        legend: [{
-            // selectedMode: 'single',
-            data: communities.map(function (a) {
-                return a.name;
-            })
-        }],
-        animationDuration: 1500,
-        animationEasingUpdate: 'quinticInOut',
-        series: [
-            {
-                name: 'Media Français',
-                type: 'graph',
-                layout: 'force',
-                data: nodesForGraph,
-                links: linksForGraph,
-                categories: communities,
-                roam: true,
-                draggable:true,
-                selectedMode:'single',
-                select:{
-                    itemStyle:{ color:"#f00",
-                    borderWidth:2,
-                    borderColor:'#fff'
-                }},
-                itemStyle:{
-                  borderColor:'#fff',
-                  borderWidth:1,
-                  borderTYpe:'solid'
-                },
-                label: {
-                  show:true,
-                    position: 'inside',
-                    formatter: '{b}',
-                    fontWeight:'bolder',
-                    color:'#fff'
-                },
-                labelLayout: {
-                    hideOverlap: true
-                },
-                force: {
-                edgeLength: 10,
-                repulsion: [10,200],
-                gravity: 0.1
-            },
-                lineStyle: {
-                    color: 'source',
-                    curveness: 0,
-                    width:3
-                },
-                edgeSymbolSize:[10,40],
-                emphasis: {
-                    focus: 'adjacency',
-                    lineStyle: {
-                        width: 20
-                    },
-                    label: {
-                    position: 'right',
-                    show: true
-                }
-                }
-            }
-        ]
-    };
-    var zr = myChart.getZr();
-    myChart.setOption(option);
+   // myChart.setOption(unHighlight);
 
     
+/* $(".rows-tables") .click(function() { 
+  var toHighlight=nodesForGraph.findIndex(x => x.name === $(this).find("td.media").text());
+  console.log('toHighliht',toHighlight)
+
+
+   myChart.setOption(get_chart('true',toHighlight));
+ })
+  .click(function() { console.log('row-tables',$(this).find("td").text());}) */
 
  
     myChart.on('click', function (params) {
@@ -629,4 +851,3 @@ get_info(params.data.name)
 
 
 });
-

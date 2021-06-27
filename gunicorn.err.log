@@ -1,0 +1,1907 @@
+[2021-06-25 14:04:54 +0000] [854949] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 14:04:54 +0000] [854949] [INFO] Listening at: http://0.0.0.0:5000 (854949)
+[2021-06-25 14:04:54 +0000] [854949] [INFO] Using worker: sync
+[2021-06-25 14:04:54 +0000] [854951] [INFO] Booting worker with pid: 854951
+[2021-06-25 14:04:55 +0000] [854952] [INFO] Booting worker with pid: 854952
+[2021-06-25 14:04:55 +0000] [854953] [INFO] Booting worker with pid: 854953
+[2021-06-25 14:04:55 +0000] [854954] [INFO] Booting worker with pid: 854954
+[2021-06-25 14:11:27 +0000] [854949] [CRITICAL] WORKER TIMEOUT (pid:854951)
+[2021-06-25 14:11:27 +0000] [854949] [CRITICAL] WORKER TIMEOUT (pid:854953)
+[2021-06-25 14:11:27 +0000] [854951] [INFO] Worker exiting (pid: 854951)
+[2021-06-25 14:11:27 +0000] [854953] [INFO] Worker exiting (pid: 854953)
+[2021-06-25 14:11:27 +0000] [855097] [INFO] Booting worker with pid: 855097
+[2021-06-25 14:11:27 +0000] [855098] [INFO] Booting worker with pid: 855098
+[2021-06-25 14:12:27 +0000] [854949] [CRITICAL] WORKER TIMEOUT (pid:854952)
+[2021-06-25 14:12:27 +0000] [854949] [CRITICAL] WORKER TIMEOUT (pid:855098)
+[2021-06-25 14:12:27 +0000] [854952] [INFO] Worker exiting (pid: 854952)
+[2021-06-25 14:12:27 +0000] [855098] [INFO] Worker exiting (pid: 855098)
+[2021-06-25 14:12:27 +0000] [854949] [WARNING] Worker with pid 854952 was terminated due to signal 9
+[2021-06-25 14:12:27 +0000] [855117] [INFO] Booting worker with pid: 855117
+[2021-06-25 14:12:27 +0000] [855118] [INFO] Booting worker with pid: 855118
+[2021-06-25 14:39:42 +0000] [854949] [INFO] Handling signal: term
+[2021-06-25 14:39:42 +0000] [855097] [INFO] Worker exiting (pid: 855097)
+[2021-06-25 14:39:42 +0000] [855118] [INFO] Worker exiting (pid: 855118)
+[2021-06-25 14:39:42 +0000] [854954] [INFO] Worker exiting (pid: 854954)
+[2021-06-25 14:39:42 +0000] [855117] [INFO] Worker exiting (pid: 855117)
+[2021-06-25 14:39:43 +0000] [854949] [INFO] Shutting down: Master
+[2021-06-25 14:39:44 +0000] [855953] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 14:39:44 +0000] [855953] [INFO] Listening at: http://0.0.0.0:5000 (855953)
+[2021-06-25 14:39:44 +0000] [855953] [INFO] Using worker: sync
+[2021-06-25 14:39:44 +0000] [855955] [INFO] Booting worker with pid: 855955
+[2021-06-25 14:39:44 +0000] [855956] [INFO] Booting worker with pid: 855956
+[2021-06-25 14:39:44 +0000] [855957] [INFO] Booting worker with pid: 855957
+[2021-06-25 14:39:44 +0000] [855958] [INFO] Booting worker with pid: 855958
+[2021-06-25 14:40:16 +0000] [855953] [INFO] Handling signal: term
+[2021-06-25 14:40:16 +0000] [855956] [INFO] Worker exiting (pid: 855956)
+[2021-06-25 14:40:16 +0000] [855957] [INFO] Worker exiting (pid: 855957)
+[2021-06-25 14:40:16 +0000] [855958] [INFO] Worker exiting (pid: 855958)
+[2021-06-25 14:40:16 +0000] [855955] [INFO] Worker exiting (pid: 855955)
+[2021-06-25 14:40:16 +0000] [855953] [INFO] Shutting down: Master
+[2021-06-25 14:40:16 +0000] [855976] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 14:40:16 +0000] [855976] [INFO] Listening at: http://0.0.0.0:5000 (855976)
+[2021-06-25 14:40:16 +0000] [855976] [INFO] Using worker: sync
+[2021-06-25 14:40:16 +0000] [855978] [INFO] Booting worker with pid: 855978
+[2021-06-25 14:40:16 +0000] [855979] [INFO] Booting worker with pid: 855979
+[2021-06-25 14:40:16 +0000] [855980] [INFO] Booting worker with pid: 855980
+[2021-06-25 14:40:16 +0000] [855981] [INFO] Booting worker with pid: 855981
+[2021-06-25 14:49:42,580] ERROR in app: Exception on /med/actu-environnement.com [GET]
+Traceback (most recent call last):
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/validalab-prod/apps/myproject.py", line 506, in get_media_1
+    return jsonify((results.data())[0])
+IndexError: list index out of range
+[2021-06-25 15:41:18,288] ERROR in app: Exception on /med/mediapart.fr [GET]
+Traceback (most recent call last):
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/validalab-prod/apps/myproject.py", line 506, in get_media_1
+    return jsonify((results.data())[0])
+IndexError: list index out of range
+[2021-06-25 15:55:03,778] ERROR in app: Exception on /med/undefined [GET]
+Traceback (most recent call last):
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/validalab-prod/apps/myproject.py", line 506, in get_media_1
+    return jsonify((results.data())[0])
+IndexError: list index out of range
+[2021-06-25 17:02:00,157] ERROR in app: Exception on /med/undefined [GET]
+Traceback (most recent call last):
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/validalab-prod/apps/myproject.py", line 506, in get_media_1
+    return jsonify((results.data())[0])
+IndexError: list index out of range
+[2021-06-25 17:02:08,483] ERROR in app: Exception on /med/theconversation.com [GET]
+Traceback (most recent call last):
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/validalab-prod/apps/myproject.py", line 506, in get_media_1
+    return jsonify((results.data())[0])
+IndexError: list index out of range
+[2021-06-25 17:10:02,266] ERROR in app: Exception on /med/numerama.com [GET]
+Traceback (most recent call last):
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/validalab-prod/apps/myproject.py", line 506, in get_media_1
+    return jsonify((results.data())[0])
+IndexError: list index out of range
+[2021-06-25 17:13:27,713] ERROR in app: Exception on /med/information-en-direct-france.com [GET]
+Traceback (most recent call last):
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/validalab-prod/apps/myproject.py", line 506, in get_media_1
+    return jsonify((results.data())[0])
+IndexError: list index out of range
+[2021-06-25 17:14:45 +0000] [855980] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:45 +0000] [855980] [INFO] Worker exiting (pid: 855980)
+[2021-06-25 17:14:46 +0000] [858869] [INFO] Booting worker with pid: 858869
+[2021-06-25 17:14:46 +0000] [855981] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:46 +0000] [855981] [INFO] Worker exiting (pid: 855981)
+[2021-06-25 17:14:46 +0000] [858871] [INFO] Booting worker with pid: 858871
+[2021-06-25 17:14:46 +0000] [855979] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:46 +0000] [855979] [INFO] Worker exiting (pid: 855979)
+[2021-06-25 17:14:46 +0000] [858872] [INFO] Booting worker with pid: 858872
+[2021-06-25 17:14:46 +0000] [855978] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:46 +0000] [855978] [INFO] Worker exiting (pid: 855978)
+[2021-06-25 17:14:46 +0000] [858873] [INFO] Booting worker with pid: 858873
+[2021-06-25 17:14:48 +0000] [858871] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:48 +0000] [858871] [INFO] Worker exiting (pid: 858871)
+[2021-06-25 17:14:48 +0000] [858877] [INFO] Booting worker with pid: 858877
+[2021-06-25 17:14:49 +0000] [858872] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:49 +0000] [858872] [INFO] Worker exiting (pid: 858872)
+[2021-06-25 17:14:49 +0000] [858873] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:49 +0000] [858873] [INFO] Worker exiting (pid: 858873)
+[2021-06-25 17:14:49 +0000] [858878] [INFO] Booting worker with pid: 858878
+[2021-06-25 17:14:49 +0000] [858879] [INFO] Booting worker with pid: 858879
+[2021-06-25 17:14:49 +0000] [858869] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:49 +0000] [858869] [INFO] Worker exiting (pid: 858869)
+[2021-06-25 17:14:49 +0000] [858882] [INFO] Booting worker with pid: 858882
+[2021-06-25 17:14:51 +0000] [858882] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:51 +0000] [858882] [INFO] Worker exiting (pid: 858882)
+[2021-06-25 17:14:51 +0000] [858885] [INFO] Booting worker with pid: 858885
+[2021-06-25 17:14:52 +0000] [858877] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:52 +0000] [858877] [INFO] Worker exiting (pid: 858877)
+[2021-06-25 17:14:52 +0000] [858878] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:52 +0000] [858878] [INFO] Worker exiting (pid: 858878)
+[2021-06-25 17:14:52 +0000] [858887] [INFO] Booting worker with pid: 858887
+[2021-06-25 17:14:52 +0000] [858888] [INFO] Booting worker with pid: 858888
+[2021-06-25 17:14:52 +0000] [858879] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:14:52 +0000] [858879] [INFO] Worker exiting (pid: 858879)
+[2021-06-25 17:14:52 +0000] [858889] [INFO] Booting worker with pid: 858889
+[2021-06-25 17:15:40 +0000] [858888] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:40 +0000] [858888] [INFO] Worker exiting (pid: 858888)
+[2021-06-25 17:15:41 +0000] [858923] [INFO] Booting worker with pid: 858923
+[2021-06-25 17:15:41 +0000] [858889] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:41 +0000] [858889] [INFO] Worker exiting (pid: 858889)
+[2021-06-25 17:15:41 +0000] [858924] [INFO] Booting worker with pid: 858924
+[2021-06-25 17:15:41 +0000] [858885] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:41 +0000] [858885] [INFO] Worker exiting (pid: 858885)
+[2021-06-25 17:15:41 +0000] [858925] [INFO] Booting worker with pid: 858925
+[2021-06-25 17:15:41 +0000] [858887] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:41 +0000] [858887] [INFO] Worker exiting (pid: 858887)
+[2021-06-25 17:15:41 +0000] [858929] [INFO] Booting worker with pid: 858929
+[2021-06-25 17:15:44 +0000] [858929] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:44 +0000] [858929] [INFO] Worker exiting (pid: 858929)
+[2021-06-25 17:15:44 +0000] [858931] [INFO] Booting worker with pid: 858931
+[2021-06-25 17:15:44 +0000] [858923] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:44 +0000] [858923] [INFO] Worker exiting (pid: 858923)
+[2021-06-25 17:15:44 +0000] [858924] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:44 +0000] [858924] [INFO] Worker exiting (pid: 858924)
+[2021-06-25 17:15:44 +0000] [858932] [INFO] Booting worker with pid: 858932
+[2021-06-25 17:15:44 +0000] [858933] [INFO] Booting worker with pid: 858933
+[2021-06-25 17:15:44 +0000] [858925] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:44 +0000] [858925] [INFO] Worker exiting (pid: 858925)
+[2021-06-25 17:15:44 +0000] [858935] [INFO] Booting worker with pid: 858935
+[2021-06-25 17:15:45 +0000] [858931] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:45 +0000] [858931] [INFO] Worker exiting (pid: 858931)
+[2021-06-25 17:15:45 +0000] [858939] [INFO] Booting worker with pid: 858939
+[2021-06-25 17:15:45 +0000] [858932] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:45 +0000] [858932] [INFO] Worker exiting (pid: 858932)
+[2021-06-25 17:15:45 +0000] [858940] [INFO] Booting worker with pid: 858940
+[2021-06-25 17:15:45 +0000] [858933] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:45 +0000] [858933] [INFO] Worker exiting (pid: 858933)
+[2021-06-25 17:15:45 +0000] [858941] [INFO] Booting worker with pid: 858941
+[2021-06-25 17:15:46 +0000] [858935] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:46 +0000] [858935] [INFO] Worker exiting (pid: 858935)
+[2021-06-25 17:15:46 +0000] [858944] [INFO] Booting worker with pid: 858944
+[2021-06-25 17:15:57 +0000] [858944] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:57 +0000] [858944] [INFO] Worker exiting (pid: 858944)
+[2021-06-25 17:15:57 +0000] [858950] [INFO] Booting worker with pid: 858950
+[2021-06-25 17:15:58 +0000] [858939] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:58 +0000] [858939] [INFO] Worker exiting (pid: 858939)
+[2021-06-25 17:15:58 +0000] [858940] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:58 +0000] [858940] [INFO] Worker exiting (pid: 858940)
+[2021-06-25 17:15:58 +0000] [858952] [INFO] Booting worker with pid: 858952
+[2021-06-25 17:15:58 +0000] [858953] [INFO] Booting worker with pid: 858953
+[2021-06-25 17:15:58 +0000] [858941] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:58 +0000] [858941] [INFO] Worker exiting (pid: 858941)
+[2021-06-25 17:15:58 +0000] [858954] [INFO] Booting worker with pid: 858954
+[2021-06-25 17:15:58 +0000] [858950] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:58 +0000] [858950] [INFO] Worker exiting (pid: 858950)
+[2021-06-25 17:15:58 +0000] [858958] [INFO] Booting worker with pid: 858958
+[2021-06-25 17:15:59 +0000] [858952] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:59 +0000] [858952] [INFO] Worker exiting (pid: 858952)
+[2021-06-25 17:15:59 +0000] [858953] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:59 +0000] [858953] [INFO] Worker exiting (pid: 858953)
+[2021-06-25 17:15:59 +0000] [858960] [INFO] Booting worker with pid: 858960
+[2021-06-25 17:15:59 +0000] [858954] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:15:59 +0000] [858954] [INFO] Worker exiting (pid: 858954)
+[2021-06-25 17:15:59 +0000] [858961] [INFO] Booting worker with pid: 858961
+[2021-06-25 17:15:59 +0000] [858962] [INFO] Booting worker with pid: 858962
+[2021-06-25 17:16:03 +0000] [858960] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:03 +0000] [858960] [INFO] Worker exiting (pid: 858960)
+[2021-06-25 17:16:03 +0000] [858966] [INFO] Booting worker with pid: 858966
+[2021-06-25 17:16:03 +0000] [858961] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:03 +0000] [858961] [INFO] Worker exiting (pid: 858961)
+[2021-06-25 17:16:03 +0000] [858962] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:03 +0000] [858962] [INFO] Worker exiting (pid: 858962)
+[2021-06-25 17:16:04 +0000] [858967] [INFO] Booting worker with pid: 858967
+[2021-06-25 17:16:04 +0000] [858968] [INFO] Booting worker with pid: 858968
+[2021-06-25 17:16:04 +0000] [858958] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:04 +0000] [858958] [INFO] Worker exiting (pid: 858958)
+[2021-06-25 17:16:04 +0000] [858969] [INFO] Booting worker with pid: 858969
+[2021-06-25 17:16:07,745] ERROR in app: Exception on /med/null [GET]
+Traceback (most recent call last):
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/validalab-prod/apps/myproject.py", line 506, in get_media_1
+    return jsonify((results.data())[0])
+IndexError: list index out of range
+[2021-06-25 17:16:09,737] ERROR in app: Exception on /med/null [GET]
+Traceback (most recent call last):
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/validalab-prod/apps/myprojectenv/lib/python3.8/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/validalab-prod/apps/myproject.py", line 506, in get_media_1
+    return jsonify((results.data())[0])
+IndexError: list index out of range
+[2021-06-25 17:16:20 +0000] [858966] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:20 +0000] [858966] [INFO] Worker exiting (pid: 858966)
+[2021-06-25 17:16:20 +0000] [858976] [INFO] Booting worker with pid: 858976
+[2021-06-25 17:16:20 +0000] [858968] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:20 +0000] [858968] [INFO] Worker exiting (pid: 858968)
+[2021-06-25 17:16:20 +0000] [858967] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:20 +0000] [858967] [INFO] Worker exiting (pid: 858967)
+[2021-06-25 17:16:20 +0000] [858977] [INFO] Booting worker with pid: 858977
+[2021-06-25 17:16:20 +0000] [858969] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:20 +0000] [858969] [INFO] Worker exiting (pid: 858969)
+[2021-06-25 17:16:20 +0000] [858978] [INFO] Booting worker with pid: 858978
+[2021-06-25 17:16:20 +0000] [858979] [INFO] Booting worker with pid: 858979
+[2021-06-25 17:16:21 +0000] [858978] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:21 +0000] [858978] [INFO] Worker exiting (pid: 858978)
+[2021-06-25 17:16:21 +0000] [858984] [INFO] Booting worker with pid: 858984
+[2021-06-25 17:16:21 +0000] [858979] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:21 +0000] [858979] [INFO] Worker exiting (pid: 858979)
+[2021-06-25 17:16:22 +0000] [858985] [INFO] Booting worker with pid: 858985
+[2021-06-25 17:16:22 +0000] [858976] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:22 +0000] [858976] [INFO] Worker exiting (pid: 858976)
+[2021-06-25 17:16:22 +0000] [858988] [INFO] Booting worker with pid: 858988
+[2021-06-25 17:16:22 +0000] [858977] [INFO] Worker reloading: /validalab-prod/apps/myproject.py modified
+[2021-06-25 17:16:22 +0000] [858977] [INFO] Worker exiting (pid: 858977)
+[2021-06-25 17:16:22 +0000] [858989] [INFO] Booting worker with pid: 858989
+[2021-06-25 17:37:36 +0000] [855976] [CRITICAL] WORKER TIMEOUT (pid:858984)
+[2021-06-25 17:37:36 +0000] [858984] [INFO] Worker exiting (pid: 858984)
+[2021-06-25 17:37:36 +0000] [859480] [INFO] Booting worker with pid: 859480
+[2021-06-25 17:38:42 +0000] [855976] [INFO] Handling signal: term
+[2021-06-25 17:38:42 +0000] [858985] [INFO] Worker exiting (pid: 858985)
+[2021-06-25 17:38:42 +0000] [858989] [INFO] Worker exiting (pid: 858989)
+[2021-06-25 17:38:42 +0000] [858988] [INFO] Worker exiting (pid: 858988)
+[2021-06-25 17:38:42 +0000] [859480] [INFO] Worker exiting (pid: 859480)
+[2021-06-25 17:38:42 +0000] [855976] [INFO] Shutting down: Master
+[2021-06-25 17:38:43 +0000] [859518] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:38:43 +0000] [859518] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:44 +0000] [859518] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:45 +0000] [859518] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:46 +0000] [859518] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:47 +0000] [859518] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:48 +0000] [859518] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:38:49 +0000] [859522] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:38:49 +0000] [859522] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:50 +0000] [859522] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:51 +0000] [859522] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:52 +0000] [859522] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:53 +0000] [859522] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:54 +0000] [859522] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:38:54 +0000] [859532] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:38:54 +0000] [859532] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:55 +0000] [859532] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:56 +0000] [859532] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:57 +0000] [859532] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:58 +0000] [859532] [ERROR] Retrying in 1 second.
+[2021-06-25 17:38:59 +0000] [859532] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:39:01 +0000] [859534] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:39:01 +0000] [859534] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:02 +0000] [859534] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:03 +0000] [859534] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:04 +0000] [859534] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:05 +0000] [859534] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:06 +0000] [859534] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:39:07 +0000] [859538] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:39:07 +0000] [859538] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:08 +0000] [859538] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:09 +0000] [859538] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:10 +0000] [859538] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:11 +0000] [859538] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:12 +0000] [859538] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:39:13 +0000] [859544] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:39:13 +0000] [859544] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:14 +0000] [859544] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:15 +0000] [859544] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:16 +0000] [859544] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:17 +0000] [859544] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:18 +0000] [859544] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:39:19 +0000] [859550] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:39:19 +0000] [859550] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:20 +0000] [859550] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:21 +0000] [859550] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:22 +0000] [859550] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:23 +0000] [859550] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:24 +0000] [859550] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:39:25 +0000] [859552] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:39:25 +0000] [859552] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:26 +0000] [859552] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:27 +0000] [859552] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:28 +0000] [859552] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:29 +0000] [859552] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:30 +0000] [859552] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:39:32 +0000] [859556] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:39:32 +0000] [859556] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:33 +0000] [859556] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:34 +0000] [859556] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:35 +0000] [859556] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:36 +0000] [859556] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:37 +0000] [859556] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:39:37 +0000] [859560] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:39:37 +0000] [859560] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:38 +0000] [859560] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:39 +0000] [859560] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:40 +0000] [859560] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:41 +0000] [859560] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:42 +0000] [859560] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:39:43 +0000] [859567] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:39:43 +0000] [859567] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:44 +0000] [859567] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:45 +0000] [859567] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:46 +0000] [859567] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:47 +0000] [859567] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:48 +0000] [859567] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:39:49 +0000] [859573] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:39:49 +0000] [859573] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:50 +0000] [859573] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:51 +0000] [859573] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:52 +0000] [859573] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:53 +0000] [859573] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:54 +0000] [859573] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:39:55 +0000] [859578] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:39:55 +0000] [859578] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:56 +0000] [859578] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:57 +0000] [859578] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:58 +0000] [859578] [ERROR] Retrying in 1 second.
+[2021-06-25 17:39:59 +0000] [859578] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:00 +0000] [859578] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:40:01 +0000] [859584] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:40:01 +0000] [859584] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:02 +0000] [859584] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:03 +0000] [859584] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:04 +0000] [859584] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:05 +0000] [859584] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:06 +0000] [859584] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:40:07 +0000] [859588] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:40:07 +0000] [859588] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:08 +0000] [859588] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:09 +0000] [859588] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:10 +0000] [859588] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:11 +0000] [859588] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:12 +0000] [859588] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:40:14 +0000] [859592] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:40:14 +0000] [859592] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:15 +0000] [859592] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:16 +0000] [859592] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:17 +0000] [859592] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:18 +0000] [859592] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:19 +0000] [859592] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:40:20 +0000] [859600] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:40:20 +0000] [859600] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:21 +0000] [859600] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:22 +0000] [859600] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:23 +0000] [859600] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:24 +0000] [859600] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:25 +0000] [859600] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:40:26 +0000] [859602] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:40:26 +0000] [859602] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:27 +0000] [859602] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:28 +0000] [859602] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:29 +0000] [859602] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:30 +0000] [859602] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:31 +0000] [859602] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:40:32 +0000] [859606] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:40:32 +0000] [859606] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:33 +0000] [859606] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:34 +0000] [859606] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:35 +0000] [859606] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:36 +0000] [859606] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:37 +0000] [859606] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:40:38 +0000] [859612] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:40:38 +0000] [859612] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:39 +0000] [859612] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:40 +0000] [859612] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:41 +0000] [859612] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:42 +0000] [859612] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:43 +0000] [859612] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:40:45 +0000] [859618] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:40:45 +0000] [859618] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:46 +0000] [859618] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:47 +0000] [859618] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:48 +0000] [859618] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:49 +0000] [859618] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:50 +0000] [859618] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:40:51 +0000] [859622] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:40:51 +0000] [859622] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:52 +0000] [859622] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:53 +0000] [859622] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:54 +0000] [859622] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:55 +0000] [859622] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:56 +0000] [859622] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:40:57 +0000] [859626] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:40:57 +0000] [859626] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:58 +0000] [859626] [ERROR] Retrying in 1 second.
+[2021-06-25 17:40:59 +0000] [859626] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:00 +0000] [859626] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:01 +0000] [859626] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:02 +0000] [859626] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:41:03 +0000] [859630] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:41:03 +0000] [859630] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:04 +0000] [859630] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:05 +0000] [859630] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:06 +0000] [859630] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:07 +0000] [859630] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:08 +0000] [859630] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:41:09 +0000] [859634] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:41:09 +0000] [859634] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:10 +0000] [859634] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:11 +0000] [859634] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:12 +0000] [859634] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:13 +0000] [859634] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:14 +0000] [859634] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:41:16 +0000] [859640] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:41:16 +0000] [859640] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:17 +0000] [859640] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:18 +0000] [859640] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:19 +0000] [859640] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:20 +0000] [859640] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:21 +0000] [859640] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:41:22 +0000] [859642] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:41:22 +0000] [859642] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:23 +0000] [859642] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:24 +0000] [859642] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:25 +0000] [859642] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:26 +0000] [859642] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:27 +0000] [859642] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:41:28 +0000] [859648] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:41:28 +0000] [859648] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:29 +0000] [859648] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:30 +0000] [859648] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:31 +0000] [859648] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:32 +0000] [859648] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:33 +0000] [859648] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:41:34 +0000] [859650] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:41:34 +0000] [859650] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:35 +0000] [859650] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:36 +0000] [859650] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:37 +0000] [859650] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:38 +0000] [859650] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:39 +0000] [859650] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:41:40 +0000] [859654] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:41:40 +0000] [859654] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:41 +0000] [859654] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:42 +0000] [859654] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:43 +0000] [859654] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:44 +0000] [859654] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:45 +0000] [859654] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:41:47 +0000] [859656] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:41:47 +0000] [859656] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:48 +0000] [859656] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:49 +0000] [859656] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:50 +0000] [859656] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:51 +0000] [859656] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:52 +0000] [859656] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:41:53 +0000] [859658] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:41:53 +0000] [859658] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:54 +0000] [859658] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:55 +0000] [859658] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:56 +0000] [859658] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:57 +0000] [859658] [ERROR] Retrying in 1 second.
+[2021-06-25 17:41:58 +0000] [859658] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:41:59 +0000] [859660] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:41:59 +0000] [859660] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:00 +0000] [859660] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:01 +0000] [859660] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:02 +0000] [859660] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:03 +0000] [859660] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:04 +0000] [859660] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:42:05 +0000] [859664] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:42:05 +0000] [859664] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:06 +0000] [859664] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:07 +0000] [859664] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:08 +0000] [859664] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:09 +0000] [859664] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:10 +0000] [859664] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:42:11 +0000] [859670] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:42:11 +0000] [859670] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:12 +0000] [859670] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:13 +0000] [859670] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:14 +0000] [859670] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:15 +0000] [859670] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:16 +0000] [859670] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:42:18 +0000] [859673] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:42:18 +0000] [859673] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:19 +0000] [859673] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:20 +0000] [859673] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:21 +0000] [859673] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:22 +0000] [859673] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:23 +0000] [859673] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:42:24 +0000] [859676] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:42:24 +0000] [859676] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:25 +0000] [859676] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:26 +0000] [859676] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:27 +0000] [859676] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:28 +0000] [859676] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:29 +0000] [859676] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:42:30 +0000] [859678] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:42:30 +0000] [859678] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:31 +0000] [859678] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:32 +0000] [859678] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:33 +0000] [859678] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:34 +0000] [859678] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:35 +0000] [859678] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:42:36 +0000] [859684] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:42:36 +0000] [859684] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:37 +0000] [859684] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:38 +0000] [859684] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:39 +0000] [859684] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:40 +0000] [859684] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:41 +0000] [859684] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:42:42 +0000] [859688] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:42:42 +0000] [859688] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:43 +0000] [859688] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:44 +0000] [859688] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:45 +0000] [859688] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:46 +0000] [859688] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:47 +0000] [859688] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:42:49 +0000] [859692] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:42:49 +0000] [859692] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:50 +0000] [859692] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:51 +0000] [859692] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:52 +0000] [859692] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:53 +0000] [859692] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:54 +0000] [859692] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:42:55 +0000] [859697] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:42:55 +0000] [859697] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:56 +0000] [859697] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:57 +0000] [859697] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:58 +0000] [859697] [ERROR] Retrying in 1 second.
+[2021-06-25 17:42:59 +0000] [859697] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:00 +0000] [859697] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:43:01 +0000] [859701] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:43:01 +0000] [859701] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:02 +0000] [859701] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:03 +0000] [859701] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:04 +0000] [859701] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:05 +0000] [859701] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:06 +0000] [859701] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:43:07 +0000] [859707] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:43:07 +0000] [859707] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:08 +0000] [859707] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:09 +0000] [859707] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:10 +0000] [859707] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:11 +0000] [859707] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:12 +0000] [859707] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:43:14 +0000] [859709] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:43:14 +0000] [859709] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:15 +0000] [859709] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:16 +0000] [859709] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:17 +0000] [859709] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:18 +0000] [859709] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:19 +0000] [859709] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:43:20 +0000] [859711] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:43:20 +0000] [859711] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:21 +0000] [859711] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:22 +0000] [859711] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:23 +0000] [859711] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:24 +0000] [859711] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:25 +0000] [859711] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:43:26 +0000] [859713] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:43:26 +0000] [859713] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:27 +0000] [859713] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:28 +0000] [859713] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:29 +0000] [859713] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:30 +0000] [859713] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:31 +0000] [859713] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:43:32 +0000] [859715] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:43:32 +0000] [859715] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:33 +0000] [859715] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:34 +0000] [859715] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:35 +0000] [859715] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:36 +0000] [859715] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:37 +0000] [859715] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:43:38 +0000] [859722] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:43:38 +0000] [859722] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:39 +0000] [859722] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:40 +0000] [859722] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:41 +0000] [859722] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:42 +0000] [859722] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:43 +0000] [859722] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:43:45 +0000] [859727] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:43:45 +0000] [859727] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:46 +0000] [859727] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:47 +0000] [859727] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:48 +0000] [859727] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:49 +0000] [859727] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:50 +0000] [859727] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:43:51 +0000] [859729] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:43:51 +0000] [859729] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:52 +0000] [859729] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:53 +0000] [859729] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:54 +0000] [859729] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:55 +0000] [859729] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:56 +0000] [859729] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:43:57 +0000] [859732] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:43:57 +0000] [859732] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:58 +0000] [859732] [ERROR] Retrying in 1 second.
+[2021-06-25 17:43:59 +0000] [859732] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:00 +0000] [859732] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:01 +0000] [859732] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:02 +0000] [859732] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:44:03 +0000] [859735] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:44:03 +0000] [859735] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:04 +0000] [859735] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:05 +0000] [859735] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:06 +0000] [859735] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:07 +0000] [859735] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:08 +0000] [859735] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:44:09 +0000] [859740] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:44:09 +0000] [859740] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:10 +0000] [859740] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:11 +0000] [859740] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:12 +0000] [859740] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:13 +0000] [859740] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:14 +0000] [859740] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:44:16 +0000] [859745] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:44:16 +0000] [859745] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:17 +0000] [859745] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:18 +0000] [859745] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:19 +0000] [859745] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:20 +0000] [859745] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:21 +0000] [859745] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:44:22 +0000] [859751] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:44:22 +0000] [859751] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:23 +0000] [859751] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:24 +0000] [859751] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:25 +0000] [859751] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:26 +0000] [859751] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:27 +0000] [859751] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:44:28 +0000] [859756] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:44:28 +0000] [859756] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:29 +0000] [859756] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:30 +0000] [859756] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:31 +0000] [859756] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:32 +0000] [859756] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:33 +0000] [859756] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:44:34 +0000] [859758] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:44:34 +0000] [859758] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:35 +0000] [859758] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:36 +0000] [859758] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:37 +0000] [859758] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:38 +0000] [859758] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:39 +0000] [859758] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:44:40 +0000] [859760] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:44:40 +0000] [859760] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:41 +0000] [859760] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:42 +0000] [859760] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:43 +0000] [859760] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:44 +0000] [859760] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:45 +0000] [859760] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:44:47 +0000] [859762] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:44:47 +0000] [859762] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:48 +0000] [859762] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:49 +0000] [859762] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:50 +0000] [859762] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:51 +0000] [859762] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:52 +0000] [859762] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:44:53 +0000] [859766] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:44:53 +0000] [859766] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:54 +0000] [859766] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:55 +0000] [859766] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:56 +0000] [859766] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:57 +0000] [859766] [ERROR] Retrying in 1 second.
+[2021-06-25 17:44:58 +0000] [859766] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:44:59 +0000] [859769] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:44:59 +0000] [859769] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:00 +0000] [859769] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:01 +0000] [859769] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:02 +0000] [859769] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:03 +0000] [859769] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:04 +0000] [859769] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:45:05 +0000] [859773] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:45:05 +0000] [859773] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:06 +0000] [859773] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:07 +0000] [859773] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:08 +0000] [859773] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:09 +0000] [859773] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:10 +0000] [859773] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:45:11 +0000] [859777] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:45:11 +0000] [859777] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:12 +0000] [859777] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:13 +0000] [859777] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:14 +0000] [859777] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:15 +0000] [859777] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:16 +0000] [859777] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:45:18 +0000] [859781] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:45:18 +0000] [859781] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:19 +0000] [859781] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:20 +0000] [859781] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:21 +0000] [859781] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:22 +0000] [859781] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:23 +0000] [859781] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:45:24 +0000] [859786] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:45:24 +0000] [859786] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:25 +0000] [859786] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:26 +0000] [859786] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:27 +0000] [859786] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:28 +0000] [859786] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:29 +0000] [859786] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:45:30 +0000] [859789] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:45:30 +0000] [859789] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:31 +0000] [859789] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:32 +0000] [859789] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:33 +0000] [859789] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:34 +0000] [859789] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:35 +0000] [859789] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:45:36 +0000] [859792] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:45:36 +0000] [859792] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:37 +0000] [859792] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:38 +0000] [859792] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:39 +0000] [859792] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:40 +0000] [859792] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:41 +0000] [859792] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:45:43 +0000] [859797] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:45:43 +0000] [859797] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:44 +0000] [859797] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:45 +0000] [859797] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:46 +0000] [859797] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:47 +0000] [859797] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:48 +0000] [859797] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:45:49 +0000] [859799] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:45:49 +0000] [859799] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:50 +0000] [859799] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:51 +0000] [859799] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:52 +0000] [859799] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:53 +0000] [859799] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:54 +0000] [859799] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:45:55 +0000] [859802] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:45:55 +0000] [859802] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:56 +0000] [859802] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:57 +0000] [859802] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:58 +0000] [859802] [ERROR] Retrying in 1 second.
+[2021-06-25 17:45:59 +0000] [859802] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:00 +0000] [859802] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:46:01 +0000] [859808] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:46:01 +0000] [859808] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:02 +0000] [859808] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:03 +0000] [859808] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:04 +0000] [859808] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:05 +0000] [859808] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:06 +0000] [859808] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:46:07 +0000] [859810] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:46:07 +0000] [859810] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:08 +0000] [859810] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:09 +0000] [859810] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:10 +0000] [859810] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:11 +0000] [859810] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:12 +0000] [859810] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:46:14 +0000] [859812] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:46:14 +0000] [859812] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:15 +0000] [859812] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:16 +0000] [859812] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:17 +0000] [859812] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:18 +0000] [859812] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:19 +0000] [859812] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:46:20 +0000] [859814] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:46:20 +0000] [859814] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:21 +0000] [859814] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:22 +0000] [859814] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:23 +0000] [859814] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:24 +0000] [859814] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:25 +0000] [859814] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:46:26 +0000] [859816] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:46:26 +0000] [859816] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:27 +0000] [859816] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:28 +0000] [859816] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:29 +0000] [859816] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:30 +0000] [859816] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:31 +0000] [859816] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:46:32 +0000] [859818] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:46:32 +0000] [859818] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:33 +0000] [859818] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:34 +0000] [859818] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:35 +0000] [859818] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:36 +0000] [859818] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:37 +0000] [859818] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:46:38 +0000] [859822] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:46:38 +0000] [859822] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:39 +0000] [859822] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:40 +0000] [859822] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:41 +0000] [859822] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:42 +0000] [859822] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:43 +0000] [859822] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:46:45 +0000] [859824] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:46:45 +0000] [859824] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:46 +0000] [859824] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:47 +0000] [859824] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:48 +0000] [859824] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:49 +0000] [859824] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:50 +0000] [859824] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:46:51 +0000] [859826] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:46:51 +0000] [859826] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:52 +0000] [859826] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:53 +0000] [859826] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:54 +0000] [859826] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:55 +0000] [859826] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:56 +0000] [859826] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:46:57 +0000] [859831] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:46:57 +0000] [859831] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:58 +0000] [859831] [ERROR] Retrying in 1 second.
+[2021-06-25 17:46:59 +0000] [859831] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:00 +0000] [859831] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:01 +0000] [859831] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:02 +0000] [859831] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:47:03 +0000] [859835] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:47:03 +0000] [859835] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:04 +0000] [859835] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:05 +0000] [859835] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:06 +0000] [859835] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:07 +0000] [859835] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:08 +0000] [859835] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:47:09 +0000] [859855] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:47:09 +0000] [859855] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:10 +0000] [859855] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:11 +0000] [859855] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:12 +0000] [859855] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:13 +0000] [859855] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:14 +0000] [859855] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:47:16 +0000] [859857] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:47:16 +0000] [859857] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:17 +0000] [859857] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:18 +0000] [859857] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:19 +0000] [859857] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:20 +0000] [859857] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:21 +0000] [859857] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:47:22 +0000] [859863] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:47:22 +0000] [859863] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:23 +0000] [859863] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:24 +0000] [859863] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:25 +0000] [859863] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:26 +0000] [859863] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:27 +0000] [859863] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:47:28 +0000] [859867] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:47:28 +0000] [859867] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:29 +0000] [859867] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:30 +0000] [859867] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:31 +0000] [859867] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:32 +0000] [859867] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:33 +0000] [859867] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:47:34 +0000] [859870] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:47:34 +0000] [859870] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:35 +0000] [859870] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:36 +0000] [859870] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:37 +0000] [859870] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:38 +0000] [859870] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:39 +0000] [859870] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:47:40 +0000] [859877] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:47:40 +0000] [859877] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:41 +0000] [859877] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:42 +0000] [859877] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:43 +0000] [859877] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:44 +0000] [859877] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:45 +0000] [859877] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:47:47 +0000] [859886] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:47:47 +0000] [859886] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:48 +0000] [859886] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:49 +0000] [859886] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:50 +0000] [859886] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:51 +0000] [859886] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:52 +0000] [859886] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:47:53 +0000] [859890] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:47:53 +0000] [859890] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:54 +0000] [859890] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:55 +0000] [859890] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:56 +0000] [859890] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:57 +0000] [859890] [ERROR] Retrying in 1 second.
+[2021-06-25 17:47:58 +0000] [859890] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:47:59 +0000] [859892] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:47:59 +0000] [859892] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:00 +0000] [859892] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:01 +0000] [859892] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:02 +0000] [859892] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:03 +0000] [859892] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:04 +0000] [859892] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:48:05 +0000] [859894] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:48:05 +0000] [859894] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:06 +0000] [859894] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:07 +0000] [859894] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:08 +0000] [859894] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:09 +0000] [859894] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:10 +0000] [859894] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:48:11 +0000] [859896] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:48:11 +0000] [859896] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:12 +0000] [859896] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:13 +0000] [859896] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:14 +0000] [859896] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:15 +0000] [859896] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:16 +0000] [859896] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:48:18 +0000] [859900] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:48:18 +0000] [859900] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:19 +0000] [859900] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:20 +0000] [859900] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:21 +0000] [859900] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:22 +0000] [859900] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:23 +0000] [859900] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:48:24 +0000] [859904] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:48:24 +0000] [859904] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:25 +0000] [859904] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:26 +0000] [859904] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:27 +0000] [859904] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:28 +0000] [859904] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:29 +0000] [859904] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:48:30 +0000] [859908] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:48:30 +0000] [859908] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:31 +0000] [859908] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:32 +0000] [859908] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:33 +0000] [859908] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:34 +0000] [859908] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:35 +0000] [859908] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:48:36 +0000] [859910] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:48:36 +0000] [859910] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:37 +0000] [859910] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:38 +0000] [859910] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:39 +0000] [859910] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:40 +0000] [859910] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:41 +0000] [859910] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:48:42 +0000] [859912] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:48:42 +0000] [859912] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:43 +0000] [859912] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:44 +0000] [859912] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:45 +0000] [859912] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:46 +0000] [859912] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:47 +0000] [859912] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:48:49 +0000] [859914] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:48:49 +0000] [859914] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:50 +0000] [859914] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:51 +0000] [859914] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:52 +0000] [859914] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:53 +0000] [859914] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:54 +0000] [859914] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:48:55 +0000] [859918] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:48:55 +0000] [859918] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:56 +0000] [859918] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:57 +0000] [859918] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:58 +0000] [859918] [ERROR] Retrying in 1 second.
+[2021-06-25 17:48:59 +0000] [859918] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:00 +0000] [859918] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:49:01 +0000] [859920] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:49:01 +0000] [859920] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:02 +0000] [859920] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:03 +0000] [859920] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:04 +0000] [859920] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:05 +0000] [859920] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:06 +0000] [859920] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:49:07 +0000] [859922] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:49:07 +0000] [859922] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:08 +0000] [859922] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:09 +0000] [859922] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:10 +0000] [859922] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:11 +0000] [859922] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:12 +0000] [859922] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:49:13 +0000] [859924] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:49:13 +0000] [859924] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:14 +0000] [859924] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:15 +0000] [859924] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:16 +0000] [859924] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:17 +0000] [859924] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:18 +0000] [859924] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:49:20 +0000] [859929] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:49:20 +0000] [859929] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:21 +0000] [859929] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:22 +0000] [859929] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:23 +0000] [859929] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:24 +0000] [859929] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:25 +0000] [859929] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:49:26 +0000] [859933] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:49:26 +0000] [859933] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:27 +0000] [859933] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:28 +0000] [859933] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:29 +0000] [859933] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:30 +0000] [859933] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:31 +0000] [859933] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:49:32 +0000] [859935] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:49:32 +0000] [859935] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:33 +0000] [859935] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:34 +0000] [859935] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:35 +0000] [859935] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:36 +0000] [859935] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:37 +0000] [859935] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:49:38 +0000] [859941] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:49:38 +0000] [859941] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:39 +0000] [859941] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:40 +0000] [859941] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:41 +0000] [859941] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:42 +0000] [859941] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:43 +0000] [859941] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:49:45 +0000] [859948] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:49:45 +0000] [859948] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:46 +0000] [859948] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:47 +0000] [859948] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:48 +0000] [859948] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:49 +0000] [859948] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:50 +0000] [859948] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:49:51 +0000] [859951] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:49:51 +0000] [859951] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:52 +0000] [859951] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:53 +0000] [859951] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:54 +0000] [859951] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:55 +0000] [859951] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:56 +0000] [859951] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:49:57 +0000] [859958] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:49:57 +0000] [859958] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:58 +0000] [859958] [ERROR] Retrying in 1 second.
+[2021-06-25 17:49:59 +0000] [859958] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:00 +0000] [859958] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:01 +0000] [859958] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:02 +0000] [859958] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:50:03 +0000] [859972] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:50:03 +0000] [859972] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:04 +0000] [859972] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:05 +0000] [859972] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:06 +0000] [859972] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:07 +0000] [859972] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:08 +0000] [859972] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:50:09 +0000] [859976] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:50:09 +0000] [859976] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:10 +0000] [859976] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:11 +0000] [859976] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:12 +0000] [859976] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:13 +0000] [859976] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:14 +0000] [859976] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:50:16 +0000] [859982] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:50:16 +0000] [859982] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:17 +0000] [859982] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:18 +0000] [859982] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:19 +0000] [859982] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:20 +0000] [859982] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:21 +0000] [859982] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:50:22 +0000] [859984] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:50:22 +0000] [859984] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:23 +0000] [859984] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:24 +0000] [859984] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:25 +0000] [859984] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:26 +0000] [859984] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:27 +0000] [859984] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:50:28 +0000] [859986] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:50:28 +0000] [859986] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:29 +0000] [859986] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:30 +0000] [859986] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:31 +0000] [859986] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:32 +0000] [859986] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:33 +0000] [859986] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:50:34 +0000] [859988] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:50:34 +0000] [859988] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:35 +0000] [859988] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:36 +0000] [859988] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:37 +0000] [859988] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:38 +0000] [859988] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:39 +0000] [859988] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:50:40 +0000] [859992] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:50:40 +0000] [859992] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:41 +0000] [859992] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:42 +0000] [859992] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:43 +0000] [859992] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:44 +0000] [859992] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:45 +0000] [859992] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:50:47 +0000] [859996] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:50:47 +0000] [859996] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:48 +0000] [859996] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:49 +0000] [859996] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:50 +0000] [859996] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:51 +0000] [859996] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:52 +0000] [859996] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:50:53 +0000] [860000] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:50:53 +0000] [860000] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:54 +0000] [860000] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:55 +0000] [860000] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:56 +0000] [860000] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:57 +0000] [860000] [ERROR] Retrying in 1 second.
+[2021-06-25 17:50:58 +0000] [860000] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:50:59 +0000] [860002] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:50:59 +0000] [860002] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:00 +0000] [860002] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:01 +0000] [860002] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:02 +0000] [860002] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:03 +0000] [860002] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:04 +0000] [860002] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:51:05 +0000] [860008] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:51:05 +0000] [860008] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:06 +0000] [860008] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:07 +0000] [860008] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:08 +0000] [860008] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:09 +0000] [860008] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:10 +0000] [860008] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:51:11 +0000] [860010] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:51:11 +0000] [860010] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:12 +0000] [860010] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:13 +0000] [860010] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:14 +0000] [860010] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:15 +0000] [860010] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:16 +0000] [860010] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:51:18 +0000] [860012] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:51:18 +0000] [860012] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:19 +0000] [860012] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:20 +0000] [860012] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:21 +0000] [860012] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:22 +0000] [860012] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:23 +0000] [860012] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:51:24 +0000] [860015] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:51:24 +0000] [860015] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:25 +0000] [860015] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:26 +0000] [860015] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:27 +0000] [860015] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:28 +0000] [860015] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:29 +0000] [860015] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:51:30 +0000] [860018] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:51:30 +0000] [860018] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:31 +0000] [860018] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:32 +0000] [860018] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:33 +0000] [860018] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:34 +0000] [860018] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:35 +0000] [860018] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:51:36 +0000] [860022] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:51:36 +0000] [860022] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:37 +0000] [860022] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:38 +0000] [860022] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:39 +0000] [860022] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:40 +0000] [860022] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:41 +0000] [860022] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:51:43 +0000] [860028] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:51:43 +0000] [860028] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:44 +0000] [860028] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:45 +0000] [860028] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:46 +0000] [860028] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:47 +0000] [860028] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:48 +0000] [860028] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:51:49 +0000] [860030] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:51:49 +0000] [860030] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:50 +0000] [860030] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:51 +0000] [860030] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:52 +0000] [860030] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:53 +0000] [860030] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:54 +0000] [860030] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:51:55 +0000] [860035] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:51:55 +0000] [860035] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:56 +0000] [860035] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:57 +0000] [860035] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:58 +0000] [860035] [ERROR] Retrying in 1 second.
+[2021-06-25 17:51:59 +0000] [860035] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:00 +0000] [860035] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:52:01 +0000] [860039] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:52:01 +0000] [860039] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:02 +0000] [860039] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:03 +0000] [860039] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:04 +0000] [860039] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:05 +0000] [860039] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:06 +0000] [860039] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:52:07 +0000] [860041] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:52:07 +0000] [860041] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:08 +0000] [860041] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:09 +0000] [860041] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:10 +0000] [860041] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:11 +0000] [860041] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:12 +0000] [860041] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:52:14 +0000] [860043] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:52:14 +0000] [860043] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:15 +0000] [860043] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:16 +0000] [860043] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:17 +0000] [860043] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:18 +0000] [860043] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:19 +0000] [860043] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:52:20 +0000] [860045] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:52:20 +0000] [860045] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:21 +0000] [860045] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:22 +0000] [860045] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:23 +0000] [860045] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:24 +0000] [860045] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:25 +0000] [860045] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:52:26 +0000] [860047] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:52:26 +0000] [860047] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:27 +0000] [860047] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:28 +0000] [860047] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:29 +0000] [860047] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:30 +0000] [860047] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:31 +0000] [860047] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:52:32 +0000] [860050] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:52:32 +0000] [860050] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:33 +0000] [860050] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:34 +0000] [860050] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:35 +0000] [860050] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:36 +0000] [860050] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:37 +0000] [860050] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:52:38 +0000] [860054] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:52:38 +0000] [860054] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:39 +0000] [860054] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:40 +0000] [860054] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:41 +0000] [860054] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:42 +0000] [860054] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:43 +0000] [860054] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:52:45 +0000] [860056] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:52:45 +0000] [860056] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:46 +0000] [860056] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:47 +0000] [860056] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:48 +0000] [860056] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:49 +0000] [860056] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:50 +0000] [860056] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:52:51 +0000] [860060] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:52:51 +0000] [860060] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:52 +0000] [860060] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:53 +0000] [860060] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:54 +0000] [860060] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:55 +0000] [860060] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:56 +0000] [860060] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:52:57 +0000] [860062] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:52:57 +0000] [860062] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:58 +0000] [860062] [ERROR] Retrying in 1 second.
+[2021-06-25 17:52:59 +0000] [860062] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:00 +0000] [860062] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:01 +0000] [860062] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:02 +0000] [860062] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:53:03 +0000] [860064] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:53:03 +0000] [860064] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:04 +0000] [860064] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:05 +0000] [860064] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:06 +0000] [860064] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:07 +0000] [860064] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:08 +0000] [860064] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:53:09 +0000] [860066] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:53:09 +0000] [860066] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:10 +0000] [860066] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:11 +0000] [860066] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:12 +0000] [860066] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:13 +0000] [860066] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:14 +0000] [860066] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:53:16 +0000] [860070] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:53:16 +0000] [860070] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:17 +0000] [860070] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:18 +0000] [860070] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:19 +0000] [860070] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:20 +0000] [860070] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:21 +0000] [860070] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:53:22 +0000] [860072] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:53:22 +0000] [860072] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:23 +0000] [860072] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:24 +0000] [860072] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:25 +0000] [860072] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:26 +0000] [860072] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:27 +0000] [860072] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:53:28 +0000] [860075] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:53:28 +0000] [860075] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:29 +0000] [860075] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:30 +0000] [860075] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:31 +0000] [860075] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:32 +0000] [860075] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:33 +0000] [860075] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:53:34 +0000] [860080] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:53:34 +0000] [860080] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:35 +0000] [860080] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:36 +0000] [860080] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:37 +0000] [860080] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:38 +0000] [860080] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:39 +0000] [860080] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:53:40 +0000] [860082] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:53:40 +0000] [860082] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:41 +0000] [860082] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:42 +0000] [860082] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:43 +0000] [860082] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:44 +0000] [860082] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:45 +0000] [860082] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:53:47 +0000] [860084] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:53:47 +0000] [860084] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:48 +0000] [860084] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:49 +0000] [860084] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:50 +0000] [860084] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:51 +0000] [860084] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:52 +0000] [860084] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:53:53 +0000] [860086] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:53:53 +0000] [860086] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:54 +0000] [860086] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:55 +0000] [860086] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:56 +0000] [860086] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:57 +0000] [860086] [ERROR] Retrying in 1 second.
+[2021-06-25 17:53:58 +0000] [860086] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:53:59 +0000] [860091] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:53:59 +0000] [860091] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:00 +0000] [860091] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:01 +0000] [860091] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:02 +0000] [860091] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:03 +0000] [860091] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:04 +0000] [860091] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:54:05 +0000] [860095] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:54:05 +0000] [860095] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:06 +0000] [860095] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:07 +0000] [860095] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:08 +0000] [860095] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:09 +0000] [860095] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:10 +0000] [860095] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:54:11 +0000] [860099] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:54:11 +0000] [860099] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:12 +0000] [860099] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:13 +0000] [860099] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:14 +0000] [860099] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:15 +0000] [860099] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:16 +0000] [860099] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:54:18 +0000] [860105] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:54:18 +0000] [860105] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:19 +0000] [860105] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:20 +0000] [860105] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:21 +0000] [860105] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:22 +0000] [860105] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:23 +0000] [860105] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:54:24 +0000] [860108] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:54:24 +0000] [860108] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:25 +0000] [860108] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:26 +0000] [860108] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:27 +0000] [860108] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:28 +0000] [860108] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:29 +0000] [860108] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:54:30 +0000] [860110] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:54:30 +0000] [860110] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:31 +0000] [860110] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:32 +0000] [860110] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:33 +0000] [860110] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:34 +0000] [860110] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:35 +0000] [860110] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:54:36 +0000] [860114] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:54:36 +0000] [860114] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:37 +0000] [860114] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:38 +0000] [860114] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:39 +0000] [860114] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:40 +0000] [860114] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:41 +0000] [860114] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:54:43 +0000] [860116] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:54:43 +0000] [860116] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:44 +0000] [860116] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:45 +0000] [860116] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:46 +0000] [860116] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:47 +0000] [860116] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:48 +0000] [860116] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:54:49 +0000] [860118] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:54:49 +0000] [860118] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:50 +0000] [860118] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:51 +0000] [860118] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:52 +0000] [860118] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:53 +0000] [860118] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:54 +0000] [860118] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:54:55 +0000] [860121] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:54:55 +0000] [860121] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:56 +0000] [860121] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:57 +0000] [860121] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:58 +0000] [860121] [ERROR] Retrying in 1 second.
+[2021-06-25 17:54:59 +0000] [860121] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:00 +0000] [860121] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:55:01 +0000] [860125] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:55:01 +0000] [860125] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:02 +0000] [860125] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:03 +0000] [860125] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:04 +0000] [860125] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:05 +0000] [860125] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:06 +0000] [860125] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:55:07 +0000] [860129] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:55:07 +0000] [860129] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:08 +0000] [860129] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:09 +0000] [860129] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:10 +0000] [860129] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:11 +0000] [860129] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:12 +0000] [860129] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:55:14 +0000] [860131] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:55:14 +0000] [860131] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:15 +0000] [860131] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:16 +0000] [860131] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:17 +0000] [860131] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:18 +0000] [860131] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:19 +0000] [860131] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:55:20 +0000] [860133] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:55:20 +0000] [860133] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:21 +0000] [860133] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:22 +0000] [860133] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:23 +0000] [860133] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:24 +0000] [860133] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:25 +0000] [860133] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:55:26 +0000] [860135] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:55:26 +0000] [860135] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:27 +0000] [860135] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:28 +0000] [860135] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:29 +0000] [860135] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:30 +0000] [860135] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:31 +0000] [860135] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:55:32 +0000] [860144] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:55:32 +0000] [860144] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:33 +0000] [860144] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:34 +0000] [860144] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:35 +0000] [860144] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:36 +0000] [860144] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:37 +0000] [860144] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:55:38 +0000] [860148] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:55:38 +0000] [860148] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:39 +0000] [860148] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:40 +0000] [860148] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:41 +0000] [860148] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:42 +0000] [860148] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:43 +0000] [860148] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:55:45 +0000] [860150] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:55:45 +0000] [860150] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:46 +0000] [860150] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:47 +0000] [860150] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:48 +0000] [860150] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:49 +0000] [860150] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:50 +0000] [860150] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:55:51 +0000] [860159] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:55:51 +0000] [860159] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:52 +0000] [860159] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:53 +0000] [860159] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:54 +0000] [860159] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:55 +0000] [860159] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:56 +0000] [860159] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:55:57 +0000] [860175] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:55:57 +0000] [860175] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:58 +0000] [860175] [ERROR] Retrying in 1 second.
+[2021-06-25 17:55:59 +0000] [860175] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:00 +0000] [860175] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:01 +0000] [860175] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:02 +0000] [860175] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:56:03 +0000] [860202] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:56:03 +0000] [860202] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:04 +0000] [860202] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:05 +0000] [860202] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:06 +0000] [860202] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:07 +0000] [860202] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:08 +0000] [860202] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:56:09 +0000] [860207] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:56:09 +0000] [860207] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:10 +0000] [860207] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:11 +0000] [860207] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:12 +0000] [860207] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:13 +0000] [860207] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:14 +0000] [860207] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:56:16 +0000] [860211] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:56:16 +0000] [860211] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:17 +0000] [860211] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:18 +0000] [860211] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:19 +0000] [860211] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:20 +0000] [860211] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:21 +0000] [860211] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:56:22 +0000] [860217] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:56:22 +0000] [860217] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:23 +0000] [860217] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:24 +0000] [860217] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:25 +0000] [860217] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:26 +0000] [860217] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:27 +0000] [860217] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:56:28 +0000] [860219] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:56:28 +0000] [860219] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:29 +0000] [860219] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:30 +0000] [860219] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:31 +0000] [860219] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:32 +0000] [860219] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:33 +0000] [860219] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:56:34 +0000] [860224] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:56:34 +0000] [860224] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:35 +0000] [860224] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:36 +0000] [860224] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:37 +0000] [860224] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:38 +0000] [860224] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:39 +0000] [860224] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:56:40 +0000] [860226] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:56:40 +0000] [860226] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:41 +0000] [860226] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:42 +0000] [860226] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:43 +0000] [860226] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:44 +0000] [860226] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:45 +0000] [860226] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:56:47 +0000] [860228] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:56:47 +0000] [860228] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:48 +0000] [860228] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:49 +0000] [860228] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:50 +0000] [860228] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:51 +0000] [860228] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:52 +0000] [860228] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:56:53 +0000] [860232] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:56:53 +0000] [860232] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:54 +0000] [860232] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:55 +0000] [860232] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:56 +0000] [860232] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:57 +0000] [860232] [ERROR] Retrying in 1 second.
+[2021-06-25 17:56:58 +0000] [860232] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:56:59 +0000] [860238] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:56:59 +0000] [860238] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:00 +0000] [860238] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:01 +0000] [860238] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:02 +0000] [860238] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:03 +0000] [860238] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:04 +0000] [860238] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:57:05 +0000] [860245] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:57:05 +0000] [860245] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:06 +0000] [860245] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:07 +0000] [860245] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:08 +0000] [860245] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:09 +0000] [860245] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:10 +0000] [860245] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:57:11 +0000] [860254] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:57:11 +0000] [860254] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:12 +0000] [860254] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:13 +0000] [860254] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:14 +0000] [860254] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:15 +0000] [860254] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:16 +0000] [860254] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:57:18 +0000] [860260] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:57:18 +0000] [860260] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:19 +0000] [860260] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:20 +0000] [860260] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:21 +0000] [860260] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:22 +0000] [860260] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:23 +0000] [860260] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:57:24 +0000] [860270] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:57:24 +0000] [860270] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:25 +0000] [860270] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:26 +0000] [860270] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:27 +0000] [860270] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:28 +0000] [860270] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:29 +0000] [860270] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:57:30 +0000] [860274] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:57:30 +0000] [860274] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:31 +0000] [860274] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:32 +0000] [860274] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:33 +0000] [860274] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:34 +0000] [860274] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:35 +0000] [860274] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:57:36 +0000] [860282] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:57:36 +0000] [860282] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:37 +0000] [860282] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:38 +0000] [860282] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:39 +0000] [860282] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:40 +0000] [860282] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:41 +0000] [860282] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:57:42 +0000] [860288] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:57:42 +0000] [860288] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:43 +0000] [860288] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:44 +0000] [860288] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:45 +0000] [860288] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:46 +0000] [860288] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:47 +0000] [860288] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:57:49 +0000] [860296] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:57:49 +0000] [860296] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:50 +0000] [860296] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:51 +0000] [860296] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:52 +0000] [860296] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:53 +0000] [860296] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:54 +0000] [860296] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:57:55 +0000] [860305] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:57:55 +0000] [860305] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:56 +0000] [860305] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:57 +0000] [860305] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:58 +0000] [860305] [ERROR] Retrying in 1 second.
+[2021-06-25 17:57:59 +0000] [860305] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:00 +0000] [860305] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:58:01 +0000] [860312] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:58:01 +0000] [860312] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:02 +0000] [860312] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:03 +0000] [860312] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:04 +0000] [860312] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:05 +0000] [860312] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:06 +0000] [860312] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:58:07 +0000] [860318] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:58:07 +0000] [860318] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:08 +0000] [860318] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:09 +0000] [860318] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:10 +0000] [860318] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:11 +0000] [860318] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:12 +0000] [860318] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:58:14 +0000] [860324] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:58:14 +0000] [860324] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:15 +0000] [860324] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:16 +0000] [860324] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:17 +0000] [860324] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:18 +0000] [860324] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:19 +0000] [860324] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:58:20 +0000] [860328] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:58:20 +0000] [860328] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:21 +0000] [860328] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:22 +0000] [860328] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:23 +0000] [860328] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:24 +0000] [860328] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:25 +0000] [860328] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:58:26 +0000] [860334] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:58:26 +0000] [860334] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:27 +0000] [860334] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:28 +0000] [860334] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:29 +0000] [860334] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:30 +0000] [860334] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:31 +0000] [860334] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:58:32 +0000] [860342] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:58:32 +0000] [860342] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:33 +0000] [860342] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:34 +0000] [860342] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:35 +0000] [860342] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:36 +0000] [860342] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:37 +0000] [860342] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:58:38 +0000] [860350] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:58:38 +0000] [860350] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:39 +0000] [860350] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:40 +0000] [860350] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:41 +0000] [860350] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:42 +0000] [860350] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:43 +0000] [860350] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:58:45 +0000] [860356] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:58:45 +0000] [860356] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:46 +0000] [860356] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:47 +0000] [860356] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:48 +0000] [860356] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:49 +0000] [860356] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:50 +0000] [860356] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:58:51 +0000] [860362] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:58:51 +0000] [860362] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:52 +0000] [860362] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:53 +0000] [860362] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:54 +0000] [860362] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:55 +0000] [860362] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:56 +0000] [860362] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:58:57 +0000] [860369] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:58:57 +0000] [860369] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:58 +0000] [860369] [ERROR] Retrying in 1 second.
+[2021-06-25 17:58:59 +0000] [860369] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:00 +0000] [860369] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:01 +0000] [860369] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:02 +0000] [860369] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:59:03 +0000] [860373] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:59:03 +0000] [860373] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:04 +0000] [860373] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:05 +0000] [860373] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:06 +0000] [860373] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:07 +0000] [860373] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:08 +0000] [860373] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:59:09 +0000] [860389] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:59:09 +0000] [860389] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:10 +0000] [860389] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:11 +0000] [860389] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:12 +0000] [860389] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:13 +0000] [860389] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:14 +0000] [860389] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:59:16 +0000] [860391] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:59:16 +0000] [860391] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:17 +0000] [860391] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:18 +0000] [860391] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:19 +0000] [860391] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:20 +0000] [860391] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:21 +0000] [860391] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:59:22 +0000] [860398] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:59:22 +0000] [860398] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:23 +0000] [860398] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:24 +0000] [860398] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:25 +0000] [860398] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:26 +0000] [860398] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:27 +0000] [860398] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:59:28 +0000] [860400] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:59:28 +0000] [860400] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:29 +0000] [860400] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:30 +0000] [860400] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:31 +0000] [860400] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:32 +0000] [860400] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:33 +0000] [860400] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:59:34 +0000] [860404] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:59:34 +0000] [860404] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:35 +0000] [860404] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:36 +0000] [860404] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:37 +0000] [860404] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:38 +0000] [860404] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:39 +0000] [860404] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:59:40 +0000] [860406] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:59:40 +0000] [860406] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:41 +0000] [860406] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:42 +0000] [860406] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:43 +0000] [860406] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:44 +0000] [860406] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:45 +0000] [860406] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:59:47 +0000] [860408] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:59:47 +0000] [860408] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:48 +0000] [860408] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:49 +0000] [860408] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:50 +0000] [860408] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:51 +0000] [860408] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:52 +0000] [860408] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:59:53 +0000] [860410] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:59:53 +0000] [860410] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:54 +0000] [860410] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:55 +0000] [860410] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:56 +0000] [860410] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:57 +0000] [860410] [ERROR] Retrying in 1 second.
+[2021-06-25 17:59:58 +0000] [860410] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 17:59:59 +0000] [860413] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 17:59:59 +0000] [860413] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:00 +0000] [860413] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:01 +0000] [860413] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:02 +0000] [860413] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:03 +0000] [860413] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:04 +0000] [860413] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:00:05 +0000] [860456] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:00:05 +0000] [860456] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:06 +0000] [860456] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:07 +0000] [860456] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:08 +0000] [860456] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:09 +0000] [860456] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:10 +0000] [860456] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:00:11 +0000] [860463] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:00:11 +0000] [860463] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:12 +0000] [860463] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:13 +0000] [860463] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:14 +0000] [860463] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:15 +0000] [860463] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:16 +0000] [860463] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:00:18 +0000] [860467] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:00:18 +0000] [860467] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:19 +0000] [860467] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:20 +0000] [860467] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:21 +0000] [860467] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:22 +0000] [860467] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:23 +0000] [860467] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:00:24 +0000] [860472] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:00:24 +0000] [860472] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:25 +0000] [860472] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:26 +0000] [860472] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:27 +0000] [860472] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:28 +0000] [860472] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:29 +0000] [860472] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:00:30 +0000] [860476] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:00:30 +0000] [860476] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:31 +0000] [860476] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:32 +0000] [860476] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:33 +0000] [860476] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:34 +0000] [860476] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:35 +0000] [860476] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:00:36 +0000] [860478] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:00:36 +0000] [860478] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:37 +0000] [860478] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:38 +0000] [860478] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:39 +0000] [860478] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:40 +0000] [860478] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:41 +0000] [860478] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:00:43 +0000] [860485] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:00:43 +0000] [860485] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:44 +0000] [860485] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:45 +0000] [860485] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:46 +0000] [860485] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:47 +0000] [860485] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:48 +0000] [860485] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:00:49 +0000] [860487] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:00:49 +0000] [860487] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:50 +0000] [860487] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:51 +0000] [860487] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:52 +0000] [860487] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:53 +0000] [860487] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:54 +0000] [860487] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:00:55 +0000] [860517] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:00:55 +0000] [860517] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:56 +0000] [860517] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:57 +0000] [860517] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:58 +0000] [860517] [ERROR] Retrying in 1 second.
+[2021-06-25 18:00:59 +0000] [860517] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:00 +0000] [860517] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:01:01 +0000] [860535] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:01:01 +0000] [860535] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:02 +0000] [860535] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:03 +0000] [860535] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:04 +0000] [860535] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:05 +0000] [860535] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:06 +0000] [860535] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:01:07 +0000] [860539] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:01:07 +0000] [860539] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:08 +0000] [860539] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:09 +0000] [860539] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:10 +0000] [860539] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:11 +0000] [860539] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:12 +0000] [860539] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:01:14 +0000] [860557] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:01:14 +0000] [860557] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:15 +0000] [860557] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:16 +0000] [860557] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:17 +0000] [860557] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:18 +0000] [860557] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:19 +0000] [860557] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:01:20 +0000] [860565] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:01:20 +0000] [860565] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:21 +0000] [860565] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:22 +0000] [860565] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:23 +0000] [860565] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:24 +0000] [860565] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:25 +0000] [860565] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:01:26 +0000] [860583] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:01:26 +0000] [860583] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:27 +0000] [860583] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:28 +0000] [860583] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:29 +0000] [860583] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:30 +0000] [860583] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:31 +0000] [860583] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:01:32 +0000] [860585] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:01:32 +0000] [860585] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:33 +0000] [860585] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:34 +0000] [860585] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:35 +0000] [860585] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:36 +0000] [860585] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:37 +0000] [860585] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:01:38 +0000] [860591] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:01:38 +0000] [860591] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:39 +0000] [860591] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:40 +0000] [860591] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:41 +0000] [860591] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:42 +0000] [860591] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:43 +0000] [860591] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:01:45 +0000] [860595] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:01:45 +0000] [860595] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:46 +0000] [860595] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:47 +0000] [860595] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:48 +0000] [860595] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:49 +0000] [860595] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:50 +0000] [860595] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:01:51 +0000] [860597] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:01:51 +0000] [860597] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:52 +0000] [860597] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:53 +0000] [860597] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:54 +0000] [860597] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:55 +0000] [860597] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:56 +0000] [860597] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:01:57 +0000] [860609] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:01:57 +0000] [860609] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:58 +0000] [860609] [ERROR] Retrying in 1 second.
+[2021-06-25 18:01:59 +0000] [860609] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:00 +0000] [860609] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:01 +0000] [860609] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:02 +0000] [860609] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:02:03 +0000] [860611] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:02:03 +0000] [860611] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:04 +0000] [860611] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:05 +0000] [860611] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:06 +0000] [860611] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:07 +0000] [860611] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:08 +0000] [860611] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:02:09 +0000] [860617] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:02:09 +0000] [860617] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:10 +0000] [860617] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:11 +0000] [860617] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:12 +0000] [860617] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:13 +0000] [860617] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:14 +0000] [860617] [ERROR] Can't connect to ('0.0.0.0', 80)
+[2021-06-25 18:02:14 +0000] [860621] [INFO] Starting gunicorn 20.1.0
+[2021-06-25 18:02:14 +0000] [860621] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:15 +0000] [860621] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:16 +0000] [860621] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:17 +0000] [860621] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:18 +0000] [860621] [ERROR] Retrying in 1 second.
+[2021-06-25 18:02:19 +0000] [860621] [ERROR] Can't connect to ('0.0.0.0', 80)

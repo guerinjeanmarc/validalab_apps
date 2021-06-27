@@ -1,7 +1,7 @@
 
 function get_info(sitename){
 
-var api_url = "http://163.172.110.238:5000"
+var api_url = "http://app.validalab.fr"
     var result=sitename
     var result_1=sitename
     //document.getElementById("input-search").value
@@ -27,7 +27,7 @@ var api_url = "http://163.172.110.238:5000"
             .then(function(response) { 
                 var news_data_1 = ''
                 for (let i = 0; i < response.length; i++) {
-                    news_data_1 += response[i]["e2.name"] + ' - ' 
+                    news_data_1 += "<span class='badge badge-info friends-badge'>"+response[i]["e2.name"] +"</span>" + ' '  
                     }
     
                     
@@ -43,14 +43,14 @@ var api_url = "http://163.172.110.238:5000"
     
             .then(function(response) { 
                 var news_data_2 = '';
-                for (let i = 0; i < response.length; i++) {
+        /*         for (let i = 0; i < response.length; i++) {
                     if(i<response.length-1){
                         news_data_2 += response[i]["e.name"] + ' <== '  ;
                     }else{
                         news_data_2 += response[i]["e.name"]   ; 
                         }
-                    }
-    
+                    } */
+                    news_data_2 += response[response.length-1]["e.name"]  
                 
                 var div_5 = document.getElementById("put_link_5");
                 var content=document.getElementById("links_content");

@@ -281,9 +281,9 @@ def get_web_graph():
     reltype = 'LINKS_TO_tot'
 
     results = db.run(
-        "MATCH path=(e:Entity )<-[:OWNED_BY]-(w1:Website )-[:LINKS_TO_tot_bij]-(w2:Website)"
-        "RETURN w1.site_name as W1, w1.PageRank as w1pr, w1.decodex as w1c, e.entity_name as entity_name1,"
-        "w2.site_name as W2, w2.PageRank as w2pr, w2.decodex as w2c, e.entity_name as entity_name2"
+        "MATCH path=(w1:Website {WCC_bij:945})-[:LINKS_TO_tot_bij]-(w2:Website)"
+        "RETURN w1.site_name as W1, w1.PageRank as w1pr, w1.fiability as w1c,"
+        "w2.site_name as W2, w2.PageRank as w2pr, w2.fiability as w2c"
          ,{"sizeProp": sizeProp}
         )
 
@@ -422,7 +422,7 @@ def get_search():
         return []
     else:
         db = get_db()
-        results = db.run("MATCH (w) "
+        results = db.run("MATCH (w:Website) "
             "WHERE w.name =~ $site_name "
             "OPTIONAL MATCH (w)-[:OWNED_BY]->(e:Entity) "
             "OPTIONAL MATCH (e)<-[:OWNED_BY]-(n) "
@@ -565,6 +565,15 @@ def get_media_9(ent_name):
     
     db = get_db()
     results = db.run("match(w:Website{name:$ent_name})-[r:LINKS_TO_tot_bij]->(w2) return w2.name, w2.PageRanktot ORDER BY w2.PageRanktot desc ",
+                    {"ent_name": ent_name})
+            # {"site_name": nodename, "ent_name":entityname})
+    return jsonify((results.data()))
+    
+@app.route("/med_9/<ent_name>", methods = ['GET'])
+def get_media_10(ent_name):
+    
+    db = get_db()
+    results = db.run("MATCH(w:Website{name:$ent_name})-[:OWNED_BY]->(e:Entity)<-[:OWNED_BY]-(n)<-[:RECOMMENDS]-(r) RETURN r.name, LABELS(r);",
                     {"ent_name": ent_name})
             # {"site_name": nodename, "ent_name":entityname})
     return jsonify((results.data()))
