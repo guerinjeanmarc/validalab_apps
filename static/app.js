@@ -1,12 +1,14 @@
 
 function get_info(sitename){
 
-var api_url = "http://app.validalab.fr"
+var api_url = "http://163.172.110.238:5000"
     var result=sitename
     var result_1=sitename
+
     //document.getElementById("input-search").value
         console.log(result)
-        var div_2 = document.getElementById('put_link');
+        var div_2 = document.getElementById('put_link')
+        div_2.style.display='block'
         div_2.innerHTML = "<span>" + result + "</span>";
         fetch(api_url + "/med/" + result)
             .then(response => response.json())
@@ -155,7 +157,7 @@ var api_url = "http://app.validalab.fr"
                 var vis = Math.round(response[0]["yt.pro_subscriberCount"] / 1000) + ' K';
                 var alink = document.createElement("a");
                 alink.href = response[0]["yt.url"];
-                alink.text = "Chaine Youtube: " + response[0]["yt.user_name"];
+                alink.text = "@" + response[0]["yt.user_name"];
                 alink.target = "_blank"
                 news_data_yt = " - " + vis +"  Subscribers";
                 document.getElementById('where_to_insert_1').appendChild(alink);
@@ -233,25 +235,74 @@ var api_url = "http://app.validalab.fr"
         
                 .then(function(response) { 
                     var news_data_5 = '';
-                    
+                    var news_data_6 = '';
+                    var pos_display='none';
+                    var neg_display='none';
                     // alert(JSON.stringify(response));
                     if (response[0] == null){
                         news_data_5 = "";
+                        news_data_6 = '';
+                        pos_display='none';
+                        neg_display='none';
                     }else{
-                        var l_1 = response.length
-                            for (let i = 0; i < l_1; i++) {
-                                news_data_5 += response[i]["r.name"] + ' - ' 
-                                }
+                        var positive_reco=response.filter(x=> x.weight>=0)
+                        var positive_lenght=positive_reco.length
+                        var negative_reco=response.filter(x=> x.weight<0)
+                        var negative_lenght=negative_reco.length
                         
+                        if (positive_lenght==0){
+                            pos_display='none'
+                        }
+                        else{
+                            pos_display='block'
+                        }
+                        if (negative_lenght==0){
+                            neg_display='none'
+                            var div_2 = document.getElementById('put_link')
+                            div_2.style.backgroundColor='#3c9951'
+                            div_2.style.borderColor='#3c9951'
+                            div_2.style.color='#fff'
+                        }
+                        else{
+                            neg_display='block'
+                            var div_2 = document.getElementById('put_link')
+                            div_2.style.backgroundColor='#b50d1e'
+                            div_2.style.borderColor='#b50d1e'
+                            div_2.style.color='#fff'
+                            
                         }
                       
-                    
+                        for (let i = 0; i < positive_lenght; i++) {
+                            news_data_5 += "<tr><td> <span class='badge badge-reco friends-badge'>"+positive_reco[i]['recommender']+"</span> </td>"+
+                            "<td><span class='badge badge-reco friends-badge'>"+positive_reco[i]['meaning'] +" </span> </td>"+
+                            "<td><span class='badge badge-reco friends-badge'><a href='"+positive_reco[i]["sourceURL"]+"'>Source</a></span>  </td>"+
+                            "</tr>"
+                            
+                            }
+                        for (let i = 0; i < negative_lenght; i++) {
+                            news_data_6 += "<tr><td> <span class='badge badge-negative friends-badge'>"+negative_reco[i]['recommender']+"</span> </td>"+
+                            "<td><span class='badge badge-negative friends-badge'>"+negative_reco[i]['meaning'] +" </span> </td>"+
+                            "<td><span class='badge badge-negative friends-badge'><a href='"+negative_reco[i]["sourceURL"]+"'>Source</a></span>  </td>"+
+                            "</tr>"
+                            
+                            }}
                     var div_11 = document.getElementById("put_link_12");
-                    var content=document.getElementById("reco_content");
+                    var pos_content=document.getElementById("pos_reco_content");
+                    var pos_table=document.getElementById("pos_reco_table");
 
-                    div_11.removeChild(content)
-                    div_11.innerHTML+="<p id='reco_content'>"+  result_1 + " est recommande par " + "</p>" + "<br>" + news_data_5;;
-
+                    div_11.removeChild(pos_content)
+                    div_11.removeChild(pos_table)
+                    div_11.innerHTML+="<p style='display:"+pos_display+"' id='pos_reco_content'>"+  result_1 + " est recommandé par "  +  positive_lenght + " labels</p>";
+                    div_11.innerHTML+= "<table style='display:"+pos_display+"' class='table table-borderless' id='pos_reco_table'>"+ news_data_5+"</table>";
+                        
+                    console.log(news_data_5)
+                    var div_12 = document.getElementById("put_link_13");
+                    var neg_content=document.getElementById("neg_reco_content");
+                    var neg_table=document.getElementById("neg_reco_table");
+                    div_12.removeChild(neg_content)
+                    div_12.removeChild(neg_table)
+                    div_12.innerHTML+="<p style='display:"+neg_display+"' id='neg_reco_content'>"  +  negative_lenght + " labels mettent le public en garde sur" +result_1+" </p>";
+                    div_12.innerHTML+= "<table style='display:"+neg_display+"' class='table table-borderless' id='neg_reco_table'>"+ news_data_6+"</table>";
                     //div_11.innerHTML += "<span style='background-color:blueviolet;'>" +  result_1 + " est recommande par " + "</span>" + "<br>" + news_data_5;
                 })
                     .catch(error => console.log("Erreur : " + "Votre media n'est pas reference dans notre base.Contactez Validalab"));

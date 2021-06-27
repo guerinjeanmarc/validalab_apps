@@ -111,7 +111,11 @@
         <div class="card-body">
           <!--       <h2 id="element3">site</h2>  
         <div class="logo-well" id="element1"><a href="\"><img src="./icons/logo_validalab_48.png" alt="logo_validalab"></a></div> -->
-          <h3 class="card-link limit" id="put_link"> </h3>
+        <span data-toggle="tooltipFields"
+        title="Retrouvez ci-dessous les informations sur le site que vous avez sélectionné à gauche">
+        <span><i class="fas fa-info-circle info"></i>
+        </span></span> <h3 class="card-link limit" style='display: none;' id="put_link"> </h3>
+         
           <!-- <h3 id="">Informations pratiques</h3>   -->
           <h6 class="card-subtitle  text-muted" style="margin: 10px;">Lutte contre la desinformation</h6>
           <!-- <p class="card-text mb-2" style="margin: 60px;">Vous visitez le site suivant:
@@ -119,7 +123,16 @@
         </p> -->
           <div id="put_link_6"></div>
           <div id="put_link_7"> </div>
-          <div  id="put_link_12" > </div>
+          <div id="put_link_3"> Recommandations</div>
+          <div  id="put_link_12" > 
+            <p id="pos_reco_content"></p>
+            <table class="table table-borderless" id="pos_reco_table"></table>
+          </div>
+          
+          <div  id="put_link_13" > 
+            <p id="neg_reco_content"></p>
+            <table class="table table-borderless" id="neg_reco_table"></table>
+          </div>
           <div id="put_link_2">
             <div id="put_link_3"> Wikipedia</div>
             <p id="summary_content"></p>
@@ -133,6 +146,7 @@
             <p id="stats_pro_content"></p>
           </div>
           <div id="put_link_10">
+            <div id="put_link_3"> Réseaux sociaux</div>
             <div id="element4"><span id="put_1"><i class="fab fa-twitter fa-lg"> </i></span> <span
                 id="where_to_insert"></span> </div>
             <div id="element5"><span id="put_2"><i class="fab fa-youtube fa-lg"> </i></span> <span

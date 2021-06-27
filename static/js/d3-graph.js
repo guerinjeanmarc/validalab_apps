@@ -8,7 +8,7 @@ var myChart = echarts.init(chartDom);
 var option;
 
 var nodesForGraph=graph.nodes.map(v=>({...v,symbolSize:v.size*4,
-  category:v.Community==null?0:v.Community==-1?2:v.Community==-0.5?1:3,
+  category:v.Community==null?0:v.Community==-0.5?2:v.Community==-1?1:3,
   color:v.Community==null ? "#a6a5a4": v.Community==-1 ? "#b50d1e": v.Community==-0.5 ? "#e89613":"#3c9951"
 }))
 setTimeout(function(){
@@ -38,12 +38,12 @@ var communities=[
         'itemStyle':{color:"#a6a5a4"}
       },
       {
-        "name": "Peu fiables",
-        'itemStyle':{color:"#e89613"}
-      },
-      {
         "name": "Pas fiables",
         'itemStyle':{color:"#b50d1e"}
+      },
+      {
+        "name": "Peu fiables",
+        'itemStyle':{color:"#e89613"}
       },
       {
         "name": "Fiables",
@@ -77,8 +77,9 @@ var communities=[
                 return a.name;
             })
         }],
-        animationDuration: 1000,
-        animationEasingUpdate: 'quinticInOut',
+        animationDuration: 50,
+        animationEasingUpdate: 'quadraticOut',
+        animationDurationUpdate:50,
         markPoint:{data:{itemStyle:{
           color: nodesForGraph.map(function (a) {
             return a.color;
@@ -97,23 +98,23 @@ var communities=[
                       y: node.y,
                       id: node.id,
                       name: node.name,
-                      symbolSize: 200,
+                      symbolSize: node.symbolSize,
                       itemStyle: {
-                          fixed:true,
+                          //fixed:true,
                           color: "#f00",
-                          shadowColor: 'rgba(0, 0, 0, 0.5)',
+                          borderColor:'#fff',
+                  borderWidth:5,
+                  borderType:'solid',
+          /*                 shadowColor: 'rgba(0, 0, 0, 0.5)',
                           shadowBlur: 10,
                           zlevel:50,
-                          z:50,
+                          z:50, */
                           
                        /*    symbolOffset:[0, '-50%'],
                           symbolKeepAspect:true */
           
                       },
-                      emphasis:{
-                        color:"#ffc000",
-                        borderCap:'square'
-                      },
+                   
                       category:node.category
                   }:{
                     x: node.x,
@@ -123,7 +124,7 @@ var communities=[
                     symbolSize: node.symbolSize,
                     itemStyle: {
                         color: node.color,
-                        opacity:0.1
+                       
                     },
                     category:node.category
                 };
@@ -133,18 +134,14 @@ var communities=[
                       source: node.source,
                       target: node.target,
                       lineStyle:{
-                        width:10,
+                        width:1,
     
-                      },
-                      symbolSize:100
+                      }
     
                   }:{
                     source: node.source,
                     target: node.target,
-                    lineStyle:{
-                      opacity:0.1,
-    
-                    }
+                    
     
                 };
               }),
@@ -155,7 +152,7 @@ var communities=[
                 select:{
                     itemStyle:{ 
                     color:"#f00",
-                    borderWidth:2,
+                    borderWidth:5,
                     borderColor:'#fff'
                 }},
                 itemStyle:{
@@ -175,20 +172,21 @@ var communities=[
                     hideOverlap: true
                 },
                 force: {
-                edgeLength: 10,
-                repulsion: [100,200],
-                gravity: 0.2
+                  edgeLength: 20,
+                  repulsion: 1500,
+                  gravity: 0.1
             },
                 lineStyle: {
-                    color: 'source',
-                    curveness: 0,
-                    width:3
+                  color: 'source',
+                  curveness: 0,
+                  width:1,
+                  opacity:0.5
                 },
                 edgeSymbolSize:[10,40],
                 emphasis: {
                     focus: 'adjacency',
                     lineStyle: {
-                        width: 20
+                        width: 5
                     },
                     label: {
                     position: 'right',
@@ -222,8 +220,9 @@ var communities=[
             return a.name;
         })
     }],
-    animationDuration: 100,
-    animationEasingUpdate: 'quinticInOut',
+    animationDuration: 50,
+    animationEasingUpdate: 'quadraticOut',
+    animationDurationUpdate:50,
     markPoint:{data:{itemStyle:{
       color: nodesForGraph.map(function (a) {
         return a.color;
@@ -236,6 +235,7 @@ var communities=[
             name: 'Media Français',
             type: 'graph',
             layout: 'force',
+            zoom:0.25,
             data: nodesForGraph.map(function (node) {
               return {
                   x: node.x,
@@ -247,10 +247,7 @@ var communities=[
                       color: node.color,
       
                   },
-                  emphasis:{
-                    color:"#ffc000",
-                    borderCap:'square'
-                  },
+                  
                   category:node.category
               };
           }),
@@ -269,13 +266,14 @@ var communities=[
             select:{
                 itemStyle:{ 
                 color:"#f00",
-                borderWidth:2,
+                borderWidth:5,
                 borderColor:'#fff'
             }},
             itemStyle:{
               borderColor:'#fff',
               borderWidth:1,
               borderTYpe:'solid',
+
               
             },
             label: {
@@ -289,20 +287,21 @@ var communities=[
                 hideOverlap: true
             },
             force: {
-            edgeLength: 20,
-            repulsion: 2000,
+            edgeLength: 10,
+            repulsion: 2500,
             gravity: 0.1
         },
             lineStyle: {
                 color: 'source',
                 curveness: 0,
-                width:3
+                width:1,
+                opacity:0.2
             },
-            edgeSymbolSize:[10,40],
+            edgeSymbolSize:[10,20],
             emphasis: {
                 focus: 'adjacency',
                 lineStyle: {
-                    width: 20
+                    width: 5
                 },
                 label: {
                 position: 'right',

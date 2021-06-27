@@ -422,18 +422,32 @@ def get_search():
         return []
     else:
         db = get_db()
-        results = db.run("MATCH (w:Website) "
+        """ results = db.run("MATCH (w:Website) "
             "WHERE w.name =~ $site_name "
             "OPTIONAL MATCH (w)-[:OWNED_BY]->(e:Entity) "
             "OPTIONAL MATCH (e)<-[:OWNED_BY]-(n) "
             "WITH e, n, reduce(sum = 0, x IN collect(e.name)|sum + coalesce(n.PageRanktot,0)) AS sum "
             "RETURN n.name as name,LABELS(n)[0] as type, n.PageRanktot, e.name,sum order by e.name, sum desc",
-            {"site_name": "(?i).*" + q + ".*"})
+            {"site_name": "(?i).*" + q + ".*"}) """
+        """     results = db.run("MATCH (w:Website)-[:OWNED_BY]->(e:Entity) "
+            "WHERE w.name =~ $site_name "
+            "RETURN w.name as name,LABELS(w)[0] as type, w.PageRank, e.name order by w.PageRank desc",
+            {"site_name": "(?i).*" + q + ".*"}) """
 
-        #results = db.run("MATCH (w) "
-        #         "WHERE w.site_name =~ $site_name "
-        #         "RETURN w LIMIT 10", {"site_name": "(?i).*" + q + ".*"}
-        #)
+
+
+        results = db.run("MATCH (w:Website)-[:OWNED_BY]->(e:Entity) "
+            "WHERE w.name =~ $site_name "
+            "WITH COLLECT({name:w.name, type: LABELS(w)[0], pr: w.PageRank, ename: e.name}) as rows "
+            "MATCH (w)<-[:RECOMMENDS]-() "
+            "WHERE w.name =~ $site_name "
+            "OPTIONAL MATCH (w)-[:OWNED_BY]->(e:Entity) "
+            "with rows + COLLECT({name:w.name, type: LABELS(w)[0], pr: w.PageRank, ename: e.name}) as allRows "
+            "UNWIND allRows as row "
+            "with row.name as name, row.type as type, row.ename as ename, row.pr as pr "
+            "RETURN DISTINCT name, type, pr, ename order by pr desc "
+            ,{"site_name": "(?i).*" + q + ".*"})
+
         return Response(dumps([serialize_search(record) for record in results]),
             mimetype="application/json")
         #return Response(dumps([serialize_media(record[0]) for record in results]),
@@ -573,10 +587,12 @@ def get_media_9(ent_name):
 def get_media_10(ent_name):
     
     db = get_db()
-    results = db.run("MATCH(w:Website{name:$ent_name})-[:OWNED_BY]->(e:Entity)<-[:OWNED_BY]-(n)<-[:RECOMMENDS]-(r) RETURN r.name, LABELS(r);",
+    results = db.run("MATCH(w:Website{name:$ent_name})<-[reco:RECOMMENDS]-(r) RETURN r.name as recommender, reco.weight as weight, reco.meaning as meaning, reco.sourceURL as sourceURL;",
                     {"ent_name": ent_name})
             # {"site_name": nodename, "ent_name":entityname})
     return jsonify((results.data()))
+
+"match(n:Website{name:'lemonde.fr'})-[:OWNED_BY*]->(e) where not (e)-[:OWNED_BY]->() return e.name"
 
 
 
