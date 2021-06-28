@@ -29,7 +29,7 @@ body { margin:0px;top:50px;margin-right:0px;bottom:0;margin-left:0px;background-
 }
   #put_link_3{font-size: 14px; border-bottom:#fcaf3b 1px solid;font-weight: 600}
   p[id$="_content"]{padding: 10px;}
-  #put_link_2,#put_link_4,#put_link_5,#put_link_6,#put_link_7,#put_link_12,#put_link_13,#put_link_11  {
+  #put_link_2,#put_link_4,#put_link_5,#put_link_6,#put_link_7,#put_link_12,#put_link_13,#put_link_11,#put_link_15,#put_link_14  {
     
     font-size: smaller;}
 /*   #put_link_4 {border: solid;font-size: smaller;}
@@ -205,4 +205,8 @@ color: white;
 }
 .searchGroup{
   display: inline-flex !important;
+}
+.put_link_14{
+  border-radius: 5px;
+  border: 1px solid;
 }

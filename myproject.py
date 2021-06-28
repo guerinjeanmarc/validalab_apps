@@ -220,7 +220,7 @@ def serialize_search(record):
     return{
         'site_name': record['name'],
         'type': record['type'],
-        'entity': record['e.name']
+        'entity': record['ename']
     }
 
 @app.route("/twit_graph")
@@ -422,13 +422,13 @@ def get_search():
         return []
     else:
         db = get_db()
-        """ results = db.run("MATCH (w:Website) "
+        """         results = db.run("MATCH (w:Website) "
             "WHERE w.name =~ $site_name "
             "OPTIONAL MATCH (w)-[:OWNED_BY]->(e:Entity) "
             "OPTIONAL MATCH (e)<-[:OWNED_BY]-(n) "
             "WITH e, n, reduce(sum = 0, x IN collect(e.name)|sum + coalesce(n.PageRanktot,0)) AS sum "
             "RETURN n.name as name,LABELS(n)[0] as type, n.PageRanktot, e.name,sum order by e.name, sum desc",
-            {"site_name": "(?i).*" + q + ".*"}) """
+            {"site_name": "(?i).*" + q + ".*"})  """
         """     results = db.run("MATCH (w:Website)-[:OWNED_BY]->(e:Entity) "
             "WHERE w.name =~ $site_name "
             "RETURN w.name as name,LABELS(w)[0] as type, w.PageRank, e.name order by w.PageRank desc",
@@ -446,7 +446,7 @@ def get_search():
             "UNWIND allRows as row "
             "with row.name as name, row.type as type, row.ename as ename, row.pr as pr "
             "RETURN DISTINCT name, type, pr, ename order by pr desc "
-            ,{"site_name": "(?i).*" + q + ".*"})
+            ,{"site_name": "(?i).*" + q + ".*"}) 
 
         return Response(dumps([serialize_search(record) for record in results]),
             mimetype="application/json")
@@ -517,7 +517,7 @@ def get_media_1(site_name):
     results = db.run("match (n {name:$site_name})-[:OWNED_BY]->(r:Entity)<-[:OWNED_BY]-(w:Wikipedia) return w.summary",
                     {"site_name": site_name})
             # {"site_name": nodename, "ent_name":entityname})
-    return jsonify((results.data())[0])
+    return jsonify((results.data()))
 @app.route("/med_1/<ent_name>", methods = ['GET'])
 def get_media_2(ent_name):
     
@@ -530,7 +530,7 @@ def get_media_2(ent_name):
 def get_media_3(ent_name):
     
     db = get_db()
-    results = db.run("match (w:Website {name:$ent_name})-[r:OWNED_BY*]->(e) return e.name",
+    results = db.run("match(n:Website{name:$ent_name})-[:OWNED_BY*]->(e) where not (e)-[:OWNED_BY]->() return e.name",
                     {"ent_name": ent_name})
             # {"site_name": nodename, "ent_name":entityname})
     return jsonify((results.data()))
@@ -538,7 +538,7 @@ def get_media_3(ent_name):
 def get_media_4(ent_name):
     
     db = get_db()
-    results = db.run("match(w:Website{name:$ent_name})-[:OWNED_BY]->(e:Entity)<-[:OWNED_BY]-(wiki:Wikipedia) return wiki.genre,wiki.categories[0]",
+    results = db.run("match(w:Website{name:$ent_name})-[:OWNED_BY]->(e:Entity)<-[:OWNED_BY]-(wiki:Wikipedia) return wiki.genre,wiki.categories[0],wiki.description",
                     {"ent_name": ent_name})
             # {"site_name": nodename, "ent_name":entityname})
     return jsonify((results.data()))
@@ -592,7 +592,7 @@ def get_media_10(ent_name):
             # {"site_name": nodename, "ent_name":entityname})
     return jsonify((results.data()))
 
-"match(n:Website{name:'lemonde.fr'})-[:OWNED_BY*]->(e) where not (e)-[:OWNED_BY]->() return e.name"
+
 
 
 

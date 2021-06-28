@@ -2,7 +2,7 @@
     var indexT
     d3.json("/web_graph", function(error, graph){
       
-console.log(graph.links)
+//console.log(graph.links)
       var chartDom = document.getElementById('main');
 var myChart = echarts.init(chartDom);
 var option;
@@ -17,10 +17,10 @@ setTimeout(function(){
 var linksForGraph=graph.links.map(v=>({...v,source:v.source,target:v.target
 }))
 //console.log(nodesForGraph) 
-graph.links.map(v=>console.log(v.source,v.target)
-)
+//graph.links.map(v=>console.log(v.source,v.target)
+//)
 /* console.log(nodesForGraph)*/
-console.log(linksForGraph) 
+//console.log(linksForGraph) 
 
 
 
@@ -34,7 +34,7 @@ console.log(linksForGraph)
 console.log(res) */
 var communities=[
       {
-        "name": "Neutre",
+        "name": "Pas d'infos",
         'itemStyle':{color:"#a6a5a4"}
       },
       {
@@ -77,9 +77,9 @@ var communities=[
                 return a.name;
             })
         }],
-        animationDuration: 50,
+        animationDuration: 5,
         animationEasingUpdate: 'quadraticOut',
-        animationDurationUpdate:50,
+        animationDurationUpdate:5,
         markPoint:{data:{itemStyle:{
           color: nodesForGraph.map(function (a) {
             return a.color;
@@ -100,20 +100,20 @@ var communities=[
                       name: node.name,
                       symbolSize: node.symbolSize,
                       itemStyle: {
-                          //fixed:true,
-                          color: "#f00",
+                          color: "#007bff",
                           borderColor:'#fff',
-                  borderWidth:5,
-                  borderType:'solid',
-          /*                 shadowColor: 'rgba(0, 0, 0, 0.5)',
-                          shadowBlur: 10,
-                          zlevel:50,
-                          z:50, */
-                          
-                       /*    symbolOffset:[0, '-50%'],
-                          symbolKeepAspect:true */
-          
+                          borderWidth:5,
+                          borderType:'solid',
                       },
+                      label:{
+                        color: "#007bff",
+                        fontWeight:900,
+                        fontSize:18 ,
+                        position:'top',
+                        backgroundColor:"white",
+                        padding:2
+                      },
+
                    
                       category:node.category
                   }:{
@@ -124,6 +124,7 @@ var communities=[
                     symbolSize: node.symbolSize,
                     itemStyle: {
                         color: node.color,
+                        opacity:0.2
                        
                     },
                     category:node.category
@@ -141,7 +142,11 @@ var communities=[
                   }:{
                     source: node.source,
                     target: node.target,
-                    
+                    lineStyle:{
+                      width:1,
+                      opacity:0.2
+  
+                    }
     
                 };
               }),
@@ -150,10 +155,19 @@ var communities=[
                 draggable:true,
                 selectedMode:'single',
                 select:{
-                    itemStyle:{ 
-                    color:"#f00",
+                  itemStyle: {
+                    color: "#007bff",
+                    borderColor:'#fff',
                     borderWidth:5,
-                    borderColor:'#fff'
+                    borderType:'solid',
+                },
+                label:{
+                  color: "#007bff",
+                  fontWeight:900,
+                  position:'top',
+                  fontSize:18 ,
+                  backgroundColor:"white",
+                  padding:2
                 }},
                 itemStyle:{
                   borderColor:'#fff',
@@ -172,7 +186,7 @@ var communities=[
                     hideOverlap: true
                 },
                 force: {
-                  edgeLength: 20,
+                  edgeLength: 30,
                   repulsion: 1500,
                   gravity: 0.1
             },
@@ -220,9 +234,9 @@ var communities=[
             return a.name;
         })
     }],
-    animationDuration: 50,
+    animationDuration: 5,
     animationEasingUpdate: 'quadraticOut',
-    animationDurationUpdate:50,
+    animationDurationUpdate:5,
     markPoint:{data:{itemStyle:{
       color: nodesForGraph.map(function (a) {
         return a.color;
@@ -264,10 +278,19 @@ var communities=[
             draggable:true,
             selectedMode:'single',
             select:{
-                itemStyle:{ 
-                color:"#f00",
+              itemStyle: {
+                color: "#007bff",
+                borderColor:'#fff',
                 borderWidth:5,
-                borderColor:'#fff'
+                borderType:'solid',
+            },
+            label:{
+              color: "#007bff",
+              fontWeight:900,
+              fontSize:18 ,
+              position:'top',
+              backgroundColor:"white",
+              padding:2
             }},
             itemStyle:{
               borderColor:'#fff',
@@ -287,7 +310,7 @@ var communities=[
                 hideOverlap: true
             },
             force: {
-            edgeLength: 10,
+            edgeLength: 30,
             repulsion: 2500,
             gravity: 0.1
         },
@@ -358,12 +381,12 @@ var communities=[
                         var t = $("table#results tbody").empty();
                         if (!data || data.length == 0) return;
                         data.forEach(function (media) {
-                            $("<tr class='rows-tables'><td class='media'><span class='badge badge-info'>" + media.site_name + "</span></td><td><span class='badge badge-info'>" + media.entity + "</span></td><td>").appendTo(t)
+                            $("<tr class='rows-tables'><td class='media'><span class='badge badge-info'>" + media.site_name + "</span></td><td>").appendTo(t)
                                     .click(function() { showDetails($(this).find("td.media").text()); get_info($(this).find("td.media").text()); 
                                     var toHighlight=nodesForGraph.findIndex(x => x.name === media.site_name);
                                     console.log('toHighliht',toHighlight)
                                   //<td><span class='badge badge-info'>" + media.type + "</span></td>
-                                  
+                                  //<td><span class='badge badge-info'>" + media.entity + "</span></td>
                                      myChart.setOption(get_chart('true',toHighlight));})
                                     .click(function() { console.log($(this).find("td").text());})
                                     //.click(function() { console.log("fonction1 ici", $(this).find("td.media").text());})
