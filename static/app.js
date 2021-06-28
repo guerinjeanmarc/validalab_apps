@@ -274,6 +274,7 @@ var api_url = "http://app.validalab.fr"
                     var pos_display='none';
                     var neg_display='none';
                     var posneg_display='none;'
+                    var none_display='none;'
                     
                     const weights = [...new Set(response.map(item => item.weight))]
                     min_weight=Math.min(...weights)
@@ -285,6 +286,7 @@ var api_url = "http://app.validalab.fr"
                         pos_display='none';
                         neg_display='none';
                         posneg_display='none';
+                        none_display='none;'
                 
                         
                     }else{
@@ -296,8 +298,20 @@ var api_url = "http://app.validalab.fr"
                         console.log()
                         var posneg_length=posneg_reco.length
                         var content=document.getElementById("put_link_14")
-                        if (min_weight==1){
+                        if (weights.includes(1)){
                             pos_display='block'
+                        }
+                        if (weights.includes(-0.5)){
+                            posneg_display='block'
+                        }
+                        if (weights.includes(-1)){
+                            neg_display='block'
+                        }
+                        if (weights.includes(null)){
+                            none_display='block'
+                        }
+                        if (min_weight==1){
+                            
                             var div_2 = document.getElementById('put_link')
                             div_2.style.backgroundColor='#3c9951'
                             div_2.style.borderColor='#3c9951'
@@ -311,7 +325,7 @@ var api_url = "http://app.validalab.fr"
                             content.style.fontSize='small'
                         }
                         if(min_weight==-0.5) {
-                            posneg_display='block'
+                            
                             var div_2 = document.getElementById('put_link')
                             div_2.style.backgroundColor='#e89613'
                             div_2.style.borderColor='#e89613'
@@ -326,7 +340,7 @@ var api_url = "http://app.validalab.fr"
                             
                         }
                         if(min_weight==-1){
-                            neg_display='block'
+                            
                             var div_2 = document.getElementById('put_link')
                             div_2.style.backgroundColor='#b50d1e'
                             div_2.style.borderColor='#b50d1e'
