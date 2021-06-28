@@ -80,8 +80,8 @@ color: white;
 }
 
 .badge-info {
-  color: #fff;
-  background-color: #17a2b8 !important;
+  color: black !important;
+  background-color: #FAD586 !important;
   
 }
 .badge-warning {
@@ -139,4 +139,70 @@ color: white;
   .col-lg-2 {
     width: 18.666667%;
 }
+}
+.table>tbody>tr>th,
+.table>tbody>tr>td,table,.table {
+    border-top: 0 !important;
+    border:0 !important
+}
+
+.navbar {
+  position: relative;
+  min-height: 80px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+.site-title{
+  font-weight: 700;
+  color:inherit
+}
+.subtitle{
+  color:inherit
+}
+
+
+
+
+.logo-well{
+  display: flex !important;
+}
+.navbar-brand {
+  float: left;
+  height: 80px !important;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.nv-title-tagline-wrap{
+  margin-left:5px
+}
+.nv-title-tagline-wrap{
+  color:black
+}
+.nv-title-tagline-wrap:hover{
+  color:#e89613 !important;
+  
+}
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #fcaf3b;
+  background: #fcaf3b;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+#input-search {
+  width: 300px;
+  height: 36px;
+  border-right: none;
+
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  
+}
+.searchGroup{
+  display: inline-flex !important;
 }

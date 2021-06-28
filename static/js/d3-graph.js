@@ -52,7 +52,7 @@ var communities=[
     ]
 
     myChart.showLoading();
-
+     
     myChart.hideLoading();
     function highlight(toHighlight){
       return {
@@ -358,11 +358,11 @@ var communities=[
                         var t = $("table#results tbody").empty();
                         if (!data || data.length == 0) return;
                         data.forEach(function (media) {
-                            $("<tr class='rows-tables'><td class='media'>" + media.site_name + "</td><td>" + media.type + "</td><td>" + media.entity + "</td><td>").appendTo(t)
+                            $("<tr class='rows-tables'><td class='media'><span class='badge badge-info'>" + media.site_name + "</span></td><td><span class='badge badge-info'>" + media.entity + "</span></td><td>").appendTo(t)
                                     .click(function() { showDetails($(this).find("td.media").text()); get_info($(this).find("td.media").text()); 
                                     var toHighlight=nodesForGraph.findIndex(x => x.name === media.site_name);
                                     console.log('toHighliht',toHighlight)
-                                  
+                                  //<td><span class='badge badge-info'>" + media.type + "</span></td>
                                   
                                      myChart.setOption(get_chart('true',toHighlight));})
                                     .click(function() { console.log($(this).find("td").text());})

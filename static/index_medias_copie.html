@@ -36,29 +36,34 @@
       <div class="row">
         
         <div class="navbar-header col-sm-3 col-md-3" style="margin-right:15px">
-          <div class="logo-well">
+          <!-- <div class="logo-well">
             <a href="\"> <img src="https://www.validalab.fr/wp-content/uploads/2020/09/Logo.png" alt="logo_validalab">
             </a>
-          </div>
+          </div> -->
           <div class="navbar-brand">
-            <div class="brand">
-              <p style="color:dark">Validalab</p>
-            </div>
+            <div class="site-logo">
+              <a class="brand" href="https://www.validalab.fr/" title="Validalab" aria-label="Validalab">
+                <div class="logo-well">
+                  <img src="https://www.validalab.fr/wp-content/uploads/2020/09/Logo.png" alt="logo_validalab">
+                  <div class="nv-title-tagline-wrap"><p class="site-title"> Validalab</p><small class="subtitle"> s'informer en confiance</small></div></div></a></div>
           </div>
         </div>
         <div class="col-sm-7 col-md-7">
           <ul class="nav navbar-nav">
             <li>
               <form role="resercher" class="navbar-form" id="search">
-                <div class="form-group">
+                <div class="form-group searchGroup">
                   <input type="text" value="lemonde.fr" id='input-search' placeholder="rechercher par nom de media"
                     class="form-control" name="search">
+                    <button class="searchButton" type="submit"><i class="fa fa-search"></i></button>
                 </div>
-                <button class="btn btn-warning" type="submit">Rechercher</button>
+               
                 <!--  <a href="\ent"><button type="button" class="btn btn-dark" style="">Entite</button></a>
                             <a href="\twit"> <button type="button" class="btn btn-dark" style="">Twitter</button></a>
                             <a href="\yout"><button type="button" class="btn btn-dark" style="">Youtube</button></a> -->
               </form>
+
+              
             </li>
           </ul>
         </div>
@@ -67,23 +72,23 @@
   </div>
   <div class="row">
     <div class="col-lg-2">
-      <div class="panel panel-default">
+      <div class="">
         <div class="panel-heading">Résultats de la recherche</div>
         <table id="results" class="table table-borderless">
           <thead>
             <tr>
-              <th>Nom
+              <th>Site
                 <span data-toggle="tooltipFields"
                   title="Ce champ représente l'adresse du site, le pseudo pour les réseau sociaux.">
                   <span><i class="fas fa-question-circle"></i>
                   </span></span>
               </th>
 
-              <th>Type
+       <!--        <th>Type
                 <span data-toggle="tooltipFields" title="Ce champ représente le type de média pour une entité.">
                   <span><i class="fas fa-question-circle"></i>
                   </span></span>
-              </th>
+              </th> -->
               <th>Entité
                 <span data-toggle="tooltipFields" title="Ce champ représente le nom de l'entité.">
                   <span><i class="fas fa-question-circle"></i>

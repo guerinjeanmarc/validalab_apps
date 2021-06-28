@@ -1,7 +1,7 @@
 
 function get_info(sitename){
 
-var api_url = "http://163.172.110.238:5000"
+var api_url = "http://app.validalab.fr"
     var result=sitename
     var result_1=sitename
 
