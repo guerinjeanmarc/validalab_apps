@@ -210,3 +210,61 @@ color: white;
   border-radius: 5px;
   border: 1px solid;
 }
+.head_result{
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.alert {
+  
+  background-color: #f44336;
+  color: white;
+  
+}
+.skip1,.skip2,.skip3{
+  border: 3px solid white;
+    padding: 3px;
+    border-radius: 15px;
+}
+.alert.warning {
+  background-color: #eea236;
+  top: -17px !important;
+  right: 320px;
+}
+.alert.warning.help2 {
+  background-color: #eea236;
+  top: -19px !important;
+  left: 3px;
+  width: 330px;
+}
+.alert.warning.help3 {
+  background-color: #eea236;
+  top: -19px !important;
+  right: 5px;
+  width: 330px;
+}
+.alert {
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: fixed;
+  z-index: 3000;
+  top: 0;
+  right: 35px;
+  width: 380;
+}
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}

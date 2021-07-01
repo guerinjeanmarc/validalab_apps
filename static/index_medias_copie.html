@@ -29,7 +29,80 @@
 <div id="graph">
 </div>
 -->
+<script >
+  // Save data to sessionStorage
+// Created for an Articles on:
+// https://www.html5andbeyond.com/session-storage-display-popup-advert/
 
+jQuery(document).ready(function($){
+ 
+ if (sessionStorage.getItem('advertOnce') !== 'true') {
+  /*  alert("Bienvenue sur l'application Validalab!\nCeci est une version beta de notre application, qui est toujours en cours de développement. Bonne visité! :)");
+   alert("Servez vous des boutons help(<span><i class='fas fa-info-circle info'></i></span>) pour vous aider durant votre navigation") */
+ $('body').append('<div class="alert"><span class="closebtn c1" onclick="this.parentElement.style.display='+"'none'"+';">&times;</span> <strong>Attention!</strong><br> Bienvenue sur l'+"'application <strong>Validalab!</strong><br>Ceci est une version <strong>beta</strong> de notre application, qui est toujours en cours de développement. <br> Bonne visite!</div>")
+ sessionStorage.setItem('advertOnce','true');
+   console.log('yes');
+   $('.closebtn.c1').on('click',function(){
+    sessionStorage.setItem('advertSkipped','true');
+  })
+  setTimeout(function(){
+  console.log(sessionStorage.getItem('advertSkipped'));
+  if (sessionStorage.getItem('advertSkipped')==='true' && sessionStorage.getItem('advertHelp') !== 'true'  ) {
+ 
+ $('body').append('<div class="alert warning"><span class="closebtn skip1" onclick="this.parentElement.style.display='+"'none'"+';">Passer</span> <strong>Première visite?</strong><br>Utilisez la barre de recherche pour chercher un site d'+"'information.<br>Les résultas de la recherche sont affichés à gauche.</div>")
+ sessionStorage.setItem('advertHelp','true');
+ $('.closebtn.skip1').on('click',function(){
+    sessionStorage.setItem('advertSkipped','true');
+  })
+
+ setTimeout(function(){
+  console.log(sessionStorage.getItem('advertSkipped'));
+  if (sessionStorage.getItem('advertHelp')==='true' && sessionStorage.getItem('advertHelp1') !== 'true'  ) {
+ 
+ $('body').append('<div class="alert warning help2"><span class="closebtn skip2" onclick="this.parentElement.style.display='+"'none'"+';">Passer</span> <strong>Première visite?</strong><br>Cliquez sur le site que vous cherchez et les informations sur ce dernier apparaitront dans le bloc à droite du graphe.</div>')
+ sessionStorage.setItem('advertHelp1','true');
+ $('.closebtn.skip2').on('click',function(){
+    sessionStorage.setItem('advertSkipped','true');
+  })
+
+  setTimeout(function(){
+  console.log(sessionStorage.getItem('advertSkipped'));
+  if (sessionStorage.getItem('advertHelp1')==='true' && sessionStorage.getItem('advertHelp2') !== 'true'  ) {
+ 
+ $('body').append('<div class="alert warning help3"><span class="closebtn skip3" onclick="this.parentElement.style.display='+"'none'"+';">Passer</span> <strong>Première visite?</strong><br>Retrouvez les informations constextuelles de la source d'+"'information que vous avez choisi dans le bloc à gauche de l'écran.</div>")
+ sessionStorage.setItem('advertHelp2','true');
+ $('.closebtn.skip2').on('click',function(){
+    sessionStorage.setItem('advertSkipped','true');
+  })
+ }
+},3000)
+ }
+},3000)
+ }
+},6000)
+
+
+/*   setTimeout(function(){
+    console.log('again');
+    console.log(sessionStorage.getItem('advertHelp'))
+    console.log(sessionStorage.getItem('advertSkipped'))
+
+    if (sessionStorage.getItem('advertHelp') !== 'true'  ) {
+ 
+ $('body').append('<div class="alert warning"><span class="closebtn" onclick="this.parentElement.style.display='+"'none'"+';">&times;</span> <strong>Première visite?</strong><br>Utilisez la barre de recherche pour chercher un site d'+"'information.<br>Les résultas de la recherche sont affichés à gauche.</div>")
+ sessionStorage.setItem('advertHelp','true');
+   
+ }
+  },1000) */
+ }
+
+
+  
+
+  
+ });
+
+</script>
   <div role="navigation" class="navbar navbar-default navbar-static-top">
     <div class="container">
       
@@ -48,6 +121,16 @@
                   <div class="nv-title-tagline-wrap"><p class="site-title"> Validalab</p><small class="subtitle"> s'informer en confiance</small></div></div></a></div>
           </div>
         </div>
+<!--         <div class="message">
+          <div class="message_pad">
+              <div id="message">
+                Test
+              </div>
+              <div class="message_leave">
+      
+              </div>
+          </div>
+      </div> -->
         <div class="col-sm-7 col-md-7">
           <ul class="nav navbar-nav">
             <li>
@@ -73,16 +156,14 @@
   <div class="row">
     <div class="col-lg-2">
       <div class="">
-        <div class="panel-heading">Résultats de la recherche</div>
+        <div class="panel-heading head_result">Résultats de la recherche <span data-toggle="tooltipFields"
+          title="Liste des sites correspondants à une requête dans la barre de recherche.">
+          <span><i class="fas fa-info-circle info"></i>
+          </span></span></div>
         <table id="results" class="table table-borderless">
           <thead>
             <tr>
-              <th>Site web
-                <span data-toggle="tooltipFields"
-                  title="Ce champ représente l'adresse du site, le pseudo pour les réseau sociaux.">
-                  <span><i class="fas fa-question-circle"></i>
-                  </span></span>
-              </th>
+              
 
        <!--        <th>Type
                 <span data-toggle="tooltipFields" title="Ce champ représente le type de média pour une entité.">
@@ -113,7 +194,7 @@
           <!--       <h2 id="element3">site</h2>  
         <div class="logo-well" id="element1"><a href="\"><img src="./icons/logo_validalab_48.png" alt="logo_validalab"></a></div> -->
         <span data-toggle="tooltipFields"
-        title="Retrouvez ci-dessous les informations sur le site que vous avez sélectionné à gauche">
+        title="Retrouvez ci-dessous les informations sur le site que vous avez sélectionné dans le bloc à gauche de l'écran.">
         <span><i class="fas fa-info-circle info"></i>
         </span></span> <h3 class="card-link limit" style='display: none;' id="put_link"> </h3>
          

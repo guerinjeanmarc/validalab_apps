@@ -1,5 +1,8 @@
 
     var indexT
+    function show_more_menu(e) {
+      console.log(e);
+    }
     d3.json("/web_graph", function(error, graph){
       
 //console.log(graph.links)
@@ -124,8 +127,11 @@ var communities=[
                     symbolSize: node.symbolSize,
                     itemStyle: {
                         color: node.color,
-                        opacity:0.2
+                        opacity:0.4
                        
+                    },
+                    label:{
+                      opacity:0.6
                     },
                     category:node.category
                 };
@@ -866,10 +872,26 @@ updateSimulation()
  
     myChart.on('click', function (params) {
         console.log(zr)
+        myChart.setOption(unHighlight)
 showDetails(params.data.name+"Website")
+myChart.showLoading();
+
+myChart.hideLoading();
+var toHighlight=nodesForGraph.findIndex(x => x.name === params.data.name);
+console.log('toHighliht',toHighlight)
+//<td><span class='badge badge-info'>" + media.type + "</span></td>
+//<td><span class='badge badge-info'>" + media.entity + "</span></td>
+ myChart.setOption(get_chart('true',toHighlight));
 get_info(params.data.name)
 	});
     
-
+  $("span.badge.badge-reco.friends-badge.recommander")
+  .click(function() { 
+    console.log('this',$(this))
+  var toHighlight=nodesForGraph.findIndex(x => x.name === $(this).text());
+  console.log('toHighliht',toHighlight)
+//<td><span class='badge badge-info'>" + media.type + "</span></td>
+//<td><span class='badge badge-info'>" + media.entity + "</span></td>
+   myChart.setOption(get_chart('true',toHighlight));})
 
 });
