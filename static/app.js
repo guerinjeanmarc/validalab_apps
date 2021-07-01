@@ -6,14 +6,14 @@ var api_url = "http://app.validalab.fr"
     var result_1=sitename
 
     //document.getElementById("input-search").value
-        console.log(result)
+        //console.log(result)
         var div_2 = document.getElementById('put_link')
         div_2.style.display='block'
         div_2.innerHTML = "<span>" + result + "</span>";
         fetch(api_url + "/med/" + result)
             .then(response => response.json())
             .then(function(response) { 
-                console.log('test',response)
+                //console.log('test',response)
                 if(response.length==0){
                 news_data="Information indisponible"
                 }
@@ -171,7 +171,7 @@ var api_url = "http://app.validalab.fr"
                         news_data_tt = " - " + vis +"  followers";
                         
                     }
-                    console.log('Twitter',alink)
+                    //console.log('Twitter',alink)
                     
                     
                     div_10.innerHTML = "<span id='put_1'><i class='fab fa-twitter fa-lg'> </i></span> <span id='where_to_insert'></span>";
@@ -196,7 +196,7 @@ var api_url = "http://app.validalab.fr"
                 news_data_yt = " - " + vis +"  Subscribers";
                 document.getElementById('where_to_insert_1').appendChild(alink);
             }
-            console.log('Youtube',news_data_yt)
+            //console.log('Youtube',news_data_yt)
             var div_11 = document.getElementById("element5");
             //div_11.innerHTML = news_data_yt;
 
@@ -221,7 +221,7 @@ var api_url = "http://app.validalab.fr"
                     news_data_fb = "  " ;
                     document.getElementById('where_to_insert_2').appendChild(alink);
                 }
-                console.log('Facebook',news_data_fb)
+               // console.log('Facebook',news_data_fb)
                 var div_11 = document.getElementById("element6");
 
                 div_11.innerHTML = "<span id='put_3'><i class='fab fa-facebook fa-lg'> </i></span> <span id='where_to_insert_2'></span>";
@@ -295,7 +295,7 @@ var api_url = "http://app.validalab.fr"
                         var negative_reco=response.filter(x=> x.weight<-0.5)
                         var negative_length=negative_reco.length
                         var posneg_reco=response.filter(x=> x.weight<0 & x.weight>=-0.5  )
-                        console.log()
+                        //console.log()
                         var posneg_length=posneg_reco.length
                         var content=document.getElementById("put_link_14")
                         if (weights.includes(1)){
@@ -415,7 +415,7 @@ var api_url = "http://app.validalab.fr"
                     div_11.innerHTML+="<p style='display:"+pos_display+"' id='pos_reco_content'>"+  result_1 + " est recommandé par "  +  positive_length + " labels</p>";
                     div_11.innerHTML+= "<table style='display:"+pos_display+"' class='table table-borderless' id='pos_reco_table'>"+ news_data_5+"</table>";
                         
-                    console.log(response)
+                   // console.log(response)
                     var div_12 = document.getElementById("put_link_13");
                     var neg_content=document.getElementById("neg_reco_content");
                     var neg_table=document.getElementById("neg_reco_table");

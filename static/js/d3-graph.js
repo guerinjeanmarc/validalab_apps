@@ -375,7 +375,7 @@ var communities=[
                             //$("<tr><td class='media'>" + media.entity_type+ "</td><td>").appendTo(e)
                         });
                     }, "json");
-                    console.log(document.getElementById("input-search").defaultValue)
+                    //console.log(document.getElementById("input-search").defaultValue)
             //console.log("media", site_name)
             return false;
         }
@@ -390,11 +390,11 @@ var communities=[
                             $("<tr class='rows-tables'><td class='media'><span class='badge badge-info'>" + media.site_name + "</span></td><td>").appendTo(t)
                                     .click(function() { showDetails($(this).find("td.media").text()); get_info($(this).find("td.media").text()); 
                                     var toHighlight=nodesForGraph.findIndex(x => x.name === media.site_name);
-                                    console.log('toHighliht',toHighlight)
+                                    //console.log('toHighliht',toHighlight)
                                   //<td><span class='badge badge-info'>" + media.type + "</span></td>
                                   //<td><span class='badge badge-info'>" + media.entity + "</span></td>
                                      myChart.setOption(get_chart('true',toHighlight));})
-                                    .click(function() { console.log($(this).find("td").text());})
+//.click(function() { console.log($(this).find("td").text());})
                                     //.click(function() { console.log("fonction1 ici", $(this).find("td.media").text());})
                                         //.submit(testfunc)
                                     //.click(function() { testfunc();})
@@ -445,8 +445,8 @@ var contLinkScale = d3.scaleLinear()
 var baseNodes = graph.nodes
 var baseLinks = graph.links
 
-console.log(graph.nodes)
-console.log(graph.links)
+//console.log(graph.nodes)
+//console.log(graph.links)
 
 function download(content, fileName, contentType) {
     var a = document.createElement("a");
@@ -460,7 +460,7 @@ const uniqueCommunities = new Set()
 for (const object of baseNodes){
   uniqueCommunities.add(object.Community)
 }
-console.log(uniqueCommunities)
+//console.log(uniqueCommunities)
 var nodes = [...baseNodes]
 var links = [...baseLinks]
 
@@ -497,7 +497,7 @@ function highlightNodeSearch(name_search){
 function showDetails(site_name) {
             $.get("/media/" + encodeURIComponent(site_name),
                     function (data) {
-                      console.log("data",data)
+                      //console.log("data",data)
                         var t = $("table#dlinks tbody").empty();
                         //var e = $("table#entity tbody").empty();
                         highlightNodeSearch(data[0].d_sitename);
@@ -713,7 +713,7 @@ function selectNode(selectedNode) {
     selectedId = undefined
     highlightNode(selectedNode)
     resetData()
-    console.log(selectedNode)
+    //console.log(selectedNode)
     showDetails(selectedNode.name+'Website')
     
     //updateSimulation()
@@ -726,7 +726,7 @@ function selectNode(selectedNode) {
     showDetails(selectedNode.name+'Website')
     
     //highlightNode(selectedNode)
-    console.log("Else",selectedNode.name+'Website')
+    //console.log("Else",selectedNode.name+'Website')
   }
 
   var neighbors = getNeighbors(selectedNode)
@@ -871,14 +871,14 @@ updateSimulation()
 
  
     myChart.on('click', function (params) {
-        console.log(zr)
+        //console.log(zr)
         myChart.setOption(unHighlight)
 showDetails(params.data.name+"Website")
 myChart.showLoading();
 
 myChart.hideLoading();
 var toHighlight=nodesForGraph.findIndex(x => x.name === params.data.name);
-console.log('toHighliht',toHighlight)
+//console.log('toHighliht',toHighlight)
 //<td><span class='badge badge-info'>" + media.type + "</span></td>
 //<td><span class='badge badge-info'>" + media.entity + "</span></td>
  myChart.setOption(get_chart('true',toHighlight));
@@ -887,9 +887,9 @@ get_info(params.data.name)
     
   $("span.badge.badge-reco.friends-badge.recommander")
   .click(function() { 
-    console.log('this',$(this))
+    //console.log('this',$(this))
   var toHighlight=nodesForGraph.findIndex(x => x.name === $(this).text());
-  console.log('toHighliht',toHighlight)
+  //console.log('toHighliht',toHighlight)
 //<td><span class='badge badge-info'>" + media.type + "</span></td>
 //<td><span class='badge badge-info'>" + media.entity + "</span></td>
    myChart.setOption(get_chart('true',toHighlight));})

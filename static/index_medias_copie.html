@@ -37,16 +37,15 @@
 jQuery(document).ready(function($){
  
  if (sessionStorage.getItem('advertOnce') !== 'true') {
-  /*  alert("Bienvenue sur l'application Validalab!\nCeci est une version beta de notre application, qui est toujours en cours de développement. Bonne visité! :)");
-   alert("Servez vous des boutons help(<span><i class='fas fa-info-circle info'></i></span>) pour vous aider durant votre navigation") */
+ 
  $('body').append('<div class="alert"><span class="closebtn c1" onclick="this.parentElement.style.display='+"'none'"+';">&times;</span> <strong>Attention!</strong><br> Bienvenue sur l'+"'application <strong>Validalab!</strong><br>Ceci est une version <strong>beta</strong> de notre application, qui est toujours en cours de développement. <br> Bonne visite!</div>")
  sessionStorage.setItem('advertOnce','true');
-   console.log('yes');
+  // console.log('yes');
    $('.closebtn.c1').on('click',function(){
     sessionStorage.setItem('advertSkipped','true');
   })
   setTimeout(function(){
-  console.log(sessionStorage.getItem('advertSkipped'));
+  //console.log(sessionStorage.getItem('advertSkipped'));
   if (sessionStorage.getItem('advertSkipped')==='true' && sessionStorage.getItem('advertHelp') !== 'true'  ) {
  
  $('body').append('<div class="alert warning"><span class="closebtn skip1" onclick="this.parentElement.style.display='+"'none'"+';">Passer</span> <strong>Première visite?</strong><br>Utilisez la barre de recherche pour chercher un site d'+"'information.<br>Les résultas de la recherche sont affichés à gauche.</div>")
@@ -56,7 +55,7 @@ jQuery(document).ready(function($){
   })
 
  setTimeout(function(){
-  console.log(sessionStorage.getItem('advertSkipped'));
+  //console.log(sessionStorage.getItem('advertSkipped'));
   if (sessionStorage.getItem('advertHelp')==='true' && sessionStorage.getItem('advertHelp1') !== 'true'  ) {
  
  $('body').append('<div class="alert warning help2"><span class="closebtn skip2" onclick="this.parentElement.style.display='+"'none'"+';">Passer</span> <strong>Première visite?</strong><br>Cliquez sur le site que vous cherchez et les informations sur ce dernier apparaitront dans le bloc à droite du graphe.</div>')
@@ -66,7 +65,7 @@ jQuery(document).ready(function($){
   })
 
   setTimeout(function(){
-  console.log(sessionStorage.getItem('advertSkipped'));
+  //console.log(sessionStorage.getItem('advertSkipped'));
   if (sessionStorage.getItem('advertHelp1')==='true' && sessionStorage.getItem('advertHelp2') !== 'true'  ) {
  
  $('body').append('<div class="alert warning help3"><span class="closebtn skip3" onclick="this.parentElement.style.display='+"'none'"+';">Passer</span> <strong>Première visite?</strong><br>Retrouvez les informations constextuelles de la source d'+"'information que vous avez choisi dans le bloc à gauche de l'écran.</div>")
